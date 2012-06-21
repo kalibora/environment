@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>configList</key>
+	<array>
+		<dict>
+			<key>identify</key>
+			<string>config_default</string>
+			<key>name</key>
+			<string>Default</string>
+		</dict>
+	</array>
+	<key>config_default</key>
+	<dict>
+		<key>remap.controlL2fn</key>
+		<integer>1</integer>
+		<key>remap.fn2controlL</key>
+		<integer>1</integer>
+		<key>repeat.initial_wait</key>
+		<integer>300</integer>
+		<key>repeat.wait</key>
+		<integer>30</integer>
+	</dict>
+	<key>selectedIndex</key>
+	<integer>0</integer>
+</dict>
+</plist>
