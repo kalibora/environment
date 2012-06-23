@@ -1,0 +1,21 @@
+[user]
+	name = kalibora
+	email = kalibora@gmail.com
+[github]
+	user = kalibora
+[core]
+	quotepath = false
+	pager = less -R
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	ui = auto
+[alias]
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+	hist = log --pretty=format:\\\"%h %ad | %s%d [%an]\\\" --graph --date=short
+[include]
+	path = .gitconfig.local

@@ -1,0 +1,66 @@
+#
+# @version $Id: .screenrc,v 1.7 2010/07/21 08:32:39 tofujiit Exp $
+# @see http://www.limy.org/program/screen_command.html
+# @see http://www.ayu.ics.keio.ac.jp/~mukai/tips/screen.html
+# @see http://d.hatena.ne.jp/naoya/20051223/1135351050
+#
+escape              # コマンド文字とリテラルコマンド生成文字をCtrl+Zに変更
+startup_message  off    # 起動時のメッセージがうっとうしいのでOFFにする
+autodetach       on     # 不慮の事故で回線が切れたりしても自動でデタッチさせる
+shell            zsh    # 環境変数$SHELLを使わずにzshにする
+defscrollback    100000 # スクロールバックバッファサイズを変更
+vbell            off    # visual bell を OFF に
+defflow          off    # よくわからないけどCtrl+sとかが効かなくなるのを防ぐ？
+
+# 256色対応
+# @see http://d.hatena.ne.jp/milk1000cc/20090205/1233792728
+defbce "on"
+term xterm-256color
+termcapinfo xterm-256color 'is=rmJH?7h?1;4;6l'
+
+# カーソルキーで移動
+# @see http://blog.blueblack.net/item_183
+# @see http://www.linux.or.jp/JM/html/GNU_screen/man1/screen.1.html
+# @see http://d.hatena.ne.jp/Tetsujin/20090901/1251740405
+### for putty ###bindkey "^[OC" next
+### for putty ###bindkey "^[OD" prev
+bindkey "^[[5C" next
+bindkey "^[[5D" prev
+###termcapinfo $TERM "ks=\E[?1l\E:ku=\E[A:kd=\E[B:kl=\E[D:kr=\E[C:kh=\E[5~:kH=\E[F" # これだとPageUPがemacsで効かなくなった
+termcapinfo $TERM "ks=\E[?1l\E:ku=\E[A:kd=\E[B:kl=\E[D:kr=\E[C:kH=\E[F"
+
+# 起動時にウインドウサイズが変化するのを抑制
+# @see http://www.proton.jp/main/apps/screen.html#trouble
+termcapinfo xterm 'is=\E[r\E[m\E[2J\E[H\E[?7h\E[?1;4;6l'
+
+# ステータスライン
+# TODO wの時幅が短い?
+hardstatus alwayslastline "[%02c] %`%-w%{=b bw}%n %t%{-}%+w"
+
+# emacsライクなウインドウ分割
+#bind 2 split
+#bind o focus
+#bind 1 only
+#bind 0 remove
+bind -c REGION 3 split -v
+bind -c REGION 2 split
+bind -c REGION 1 only
+bind -c REGION 0 remove
+bind -c REGION o focus up
+bind -c REGION p focus down
+bind -c REGION \^ resize
+bind x command -c REGION
+
+# 文字コードの切り替え
+bind ^U encoding utf8
+bind ^E encoding eucjp
+bind ^J encoding sjis
+
+# ロックを無効に
+# see http://blog.goo.ne.jp/sohgoh/e/0899b61e191d2f861203a1c870cfa23d
+bind ^x
+
+# emacsライクなコピーモード
+# @see http://subtech.g.hatena.ne.jp/antipop/20070828/1188279794
+# @see http://at-aka.blogspot.com/2008/08/gnu-screen-screenrc.html
+markkeys h=^b:l=^f:$=^e:^u=^z:^d=^v

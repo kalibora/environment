@@ -1,0 +1,21 @@
+#--------------------------------------------------------------------
+# .alias
+#
+# shellに依存しない(bash and zsh)aliasをここに書く
+#--------------------------------------------------------------------
+alias cc='cc -Wall'
+alias rm='rm -i'
+alias mv='mv -i'
+alias cp='cp -i'
+alias ll='ls -GFl'
+alias la='ls -GFla'
+alias lll='ls -Flat | head -30'
+alias ls='ls -GF'
+alias diff='diff -u'
+alias rdiff='rdiff -u'
+alias l='less'
+alias bkuptgz='tar cpvzf $(date +%Y%m%d_%H%M%S).tgz'
+alias rlwrap='rlwrap -s 1000000'
+alias sls='screen -ls'
+alias sr='screen -r'
+alias ackless='ack --pager="less -R"'
