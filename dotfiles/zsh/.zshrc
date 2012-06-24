@@ -16,10 +16,11 @@ PATH=$HOME/bin:$HOME/local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr
 ENV=$HOME/.zshrc; export ENV
 
 #--------------------------------------------------------------------
-# php-build
+# php-version
 #--------------------------------------------------------------------
-export PHP_HOME=$HOME/local/php/versions
-source $(brew --prefix php-version)/php-version.sh && php-version 5.3.10 >/dev/null
+export PHP_VERSIONS=$HOME/local/php/versions
+#source $(brew --prefix php-version)/php-version.sh && php-version 5.3.14 >/dev/null
+source $(brew --prefix php-version)/php-version.sh && php-version 5.4.4 >/dev/null
 
 export APACHE_PATH=$(brew --prefix httpd)
 
