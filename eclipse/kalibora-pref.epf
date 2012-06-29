@@ -1,4 +1,4 @@
-#Thu Jun 21 23:53:55 JST 2012
+#Fri Jun 29 10:44:08 JST 2012
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.indentation.size=4
 /instance/org.jboss.ide.eclipse.freemarker/color.string=255,160,122
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_before_closing_angle_bracket_in_parameterized_type_reference=do not insert
@@ -33,7 +33,7 @@
 /instance/org.eclipse.cdt.ui/semanticHighlighting.field.color=255,236,139
 /instance/org.eclipse.jdt.ui/semanticHighlighting.method.color=255,255,255
 /instance/org.eclipse.wst.css.ui/SELECTOR=\#FFFFFF | null | null | null | null | null
-@org.eclipse.wst.sse.core=1.1.602.v201112071516
+@org.eclipse.wst.sse.core=1.1.700.v201205171812
 /instance/com.adobe.flexide.as.core/asStringColor=\#FFA07A
 /instance/org.cfeclipse.cfml/cssTextColor=255,255,255
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.continuation_indentation=2
@@ -57,7 +57,7 @@
 /instance/com.adobe.flexide.mxml.core/mxmlTagColor=\#FFEC8B
 /instance/org.eclipse.ui.editors/printMarginColor=202,225,255
 /instance/org.codehaus.groovy.eclipse.ui/semanticHighlighting.staticMethodInvocation.italic=true
-@org.eclipse.jdt.core=3.7.3.v20120119-1537
+@org.eclipse.jdt.core=3.8.1.v20120531-0637
 /instance/org.eclipse.cdt.ui/semanticHighlighting.namespace.italic=true
 /instance/org.cfeclipse.cfml/SQLTextColor=255,255,255
 /instance/org.eclipse.jdt.ui/semanticHighlighting.typeParameter.bold=false
@@ -137,7 +137,7 @@
 /instance/org.python.pydev/DECORATOR_COLOR=255,255,255
 /instance/org.eclipse.cdt.ui/c_numbers=255,255,255
 /instance/org.eclipse.php.ui/semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.StaticMethodHighlighting.color=\#FFFFFF
-@org.eclipse.wst.jsdt.ui=1.1.102.v201201131900
+@org.eclipse.wst.jsdt.ui=1.1.201.v201204101526
 /instance/org.eclipse.ui.editors/deletionIndicationColor=210,82,82
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_before_unary_operator=do not insert
 /instance/org.eclipse.jdt.ui/java_default=255,255,255
@@ -146,7 +146,7 @@
 /instance/org.eclipse.wst.jsdt.ui/java_doc_link=255,127,36
 /instance/net.sourceforge.texlipse/spe.TexColor=191,62,255
 /instance/com.powerflasher.fdt.ui/CHARACTER_color=255,160,122
-@org.eclipse.wst.html.ui=1.0.602.v201202091936
+@org.eclipse.wst.html.ui=1.0.700.v201201102037
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.alignment_for_throws_clause_in_constructor_declaration=16
 /instance/org.eclipse.jdt.ui/semanticHighlighting.staticMethodInvocation.italic=true
 /instance/org.codehaus.groovy.eclipse.ui/semanticHighlighting.interface.color=152,251,152
@@ -175,7 +175,7 @@
 /instance/org.eclipse.php.ui/semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.StaticMethodHighlighting.italic=true
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_after_opening_paren_in_switch=do not insert
 /instance/org.eclipse.cdt.ui/semanticHighlighting.staticField.color=255,236,139
-@org.eclipse.ui=3.7.0.v20110928-1505
+@org.eclipse.ui=3.103.0.v20120521-2329
 /instance/org.eclipse.jdt.ui/semanticHighlighting.field.color=255,236,139
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.StaticSetter_enabled=true
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.indent_statements_compare_to_block=true
@@ -210,7 +210,7 @@
 /instance/org.eclipse.ui.editors/searchResultIndicationColor=70,68,103
 /instance/org.eclipse.php.ui/semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.FieldHighlighting.enabled=true
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.never_indent_block_comments_on_first_column=false
-@com.dubture.symfony.index=1.0.75
+@com.dubture.symfony.index=1.0.76
 /instance/com.powerflasher.fdt.ui/AS_CONSTANTS_color_underline=false
 /instance/com.adobe.flexide.as.core/asOperatorColor=\#FFFFFF
 /instance/org.eclipse.wst.jsdt.ui/semanticHighlighting.methodDeclarationName.color=176,226,255
@@ -284,7 +284,7 @@
 /instance/org.eclipse.cdt.ui/semanticHighlighting.methodDeclaration.italic=false
 /instance/org.eclipse.jdt.ui/semanticHighlighting.inheritedMethodInvocation.enabled=true
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_before_question_in_wildcard=do not insert
-@com.dubture.symfony.core=1.0.75
+@com.dubture.symfony.core=1.0.76
 /instance/org.eclipse.wst.css.ui/ATTRIBUTE_VALUE=\#FFFFFF | null | null | null | null | null
 /instance/org.eclipse.dltk.core.index.sql.h2/schemaVersion=0.7
 /instance/org.codehaus.groovy.eclipse.ui/groovy.editor.highlight.javatypes.color=152,251,152
@@ -336,7 +336,7 @@
 /instance/com.github.eclipsecolortheme/importedColorTheme1=<?xml version\="1.0" encoding\="utf-8"?>\n<colorTheme id\="3740" name\="iteman Emacs" modified\="2011-10-29 10\:14\:26" author\="iteman">\n    <searchResultIndication color\="\#464467" />\n    <filteredSearchResultIndication color\="\#3F3F6A" />\n    <occurrenceIndication color\="\#616161" />\n    <writeOccurrenceIndication color\="\#948567" />\n    <findScope color\="\#BCADAD" />\n    <deletionIndication color\="\#D25252" />\n    <sourceHoverBackground color\="\#A19879" />\n    <singleLineComment color\="\#FFDAB9" />\n    <multiLineComment color\="\#FFDAB9" />\n    <commentTaskTag color\="\#FFDAB9" />\n    <javadoc color\="\#FF7F24" />\n    <javadocLink color\="\#FF7F24" />\n    <javadocTag color\="\#BF3EFF" />\n    <javadocKeyword color\="\#FF7F24" />\n    <class color\="\#98FB98" />\n    <interface color\="\#98FB98" italic\="true" />\n    <method color\="\#FFFFFF" />\n    <methodDeclaration color\="\#B0E2FF" bold\="false" italic\="false" underline\="false" strikethrough\="false" />\n    <bracket color\="\#FFFFFF" />\n    <number color\="\#FFFFFF" />\n    <string color\="\#FFA07A" />\n    <operator color\="\#FFFFFF" />\n    <keyword color\="\#00FFFF" />\n    <annotation color\="\#BF3EFF" />\n    <staticMethod color\="\#FFFFFF" italic\="true" />\n    <localVariable color\="\#FFEC8B" />\n    <localVariableDeclaration color\="\#FFEC8B" />\n    <field color\="\#FFEC8B" />\n    <staticField color\="\#FFEC8B" />\n    <staticFinalField color\="\#FFC0CB" bold\="false" italic\="false" />\n    <deprecatedMember color\="\#CAE1FF" />\n    <enum color\="\#FFEC8B" />\n    <inheritedMethod color\="\#B0E2FF" underline\="false" strikethrough\="false" />\n    <abstractMethod color\="\#B0E2FF" />\n    <parameterVariable color\="\#FFEC8B" underline\="false" strikethrough\="false" />\n    <typeArgument color\="\#4B9CE9" bold\="false" />\n    <typeParameter color\="\#4B9CE9" bold\="false" />\n    <constant color\="\#7FFFD4" bold\="false" italic\="false" underline\="false" strikethrough\="false" />\n    <background color\="\#292929" />\n    <currentLine color\="\#556B2F" />\n    <foreground color\="\#FFFFFF" />\n    <lineNumber color\="\#CAE1FF" />\n    <selectionBackground color\="\#6495ED" />\n    <selectionForeground color\="\#FFFFFF" />\n</colorTheme>
 /instance/org.eclipse.php.ui/org.eclipse.php.ui.editor.templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
 /instance/org.eclipse.cdt.ui/semanticHighlighting.methodDeclaration.strikethrough=false
-@org.eclipse.dltk.launching=3.0.0.v20110423
+@org.eclipse.dltk.launching=4.0.0.201206120848
 /instance/org.eclipse.cdt.ui/semanticHighlighting.functionDeclaration.underline=false
 /instance/com.dubture.twig.ui/org.eclipse.php.smarty.ui.editor.templates=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><templates/>
 /instance/org.eclipse.php.ui/editorColorKeyword=\#00FFFF | null | null | null | null | null
@@ -351,7 +351,7 @@
 /instance/org.eclipse.jdt.ui/content_assist_proposals_foreground=0,0,0
 /instance/org.eclipse.wst.xml.ui/commentBorder=\#FFDAB9 | null | null | null | null | null
 /instance/org.epic.perleditor/AbstractTextEditor.Color.Background=41,41,41
-@org.eclipse.ui.editors=3.7.0.v20110928-1504
+@org.eclipse.ui.editors=3.8.0.v20120523-1540
 /instance/org.dadacoalition.yedit/colorDocumentPreference=255,160,105
 /instance/org.dadacoalition.yedit/colorConstantPreferences=255,187,255
 /instance/com.powerflasher.fdt.ui/JAVADOC_color=255,127,36
@@ -420,17 +420,17 @@
 /instance/org.eclipse.php.ui/org.eclipse.php.ui.wizards.JSsupport=true
 /instance/org.eclipse.php.core/org.eclipse.php.core.phpForamtterUseTabs=false
 /instance/com.adobe.flexide.mxml.core/mxmlProcessingInstructionColor=\#FFFFFF
-@org.eclipse.wst.css.ui=1.0.601.v201201101544
+@org.eclipse.wst.css.ui=1.0.700.v201201102037
 /instance/net.sourceforge.texlipse/str.BibColor=255,160,122
-@com.dubture.twig.ui=1.0.107
+@com.dubture.twig.ui=1.0.108
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.classpathVariable.JRE_SRCROOT=
 /instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.ui.workbenchMisc
 /instance/org.eclipse.wst.xml.ui/xmlContent=\#FFFFFF | null | null | null | null | null
 /instance/org.eclipse.cdt.ui/semanticHighlighting.class.color=152,251,152
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_before_opening_brace_in_block=insert
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_after_comma_in_method_declaration_parameters=insert
-/instance/de.walware.statet.r.ui/text_R_rDefault.color=255,255,255
 /instance/org.eclipse.ui.editors/AbstractTextEditor.Color.SelectionBackground.SystemDefault=false
+/instance/de.walware.statet.r.ui/text_R_rDefault.color=255,255,255
 /instance/org.eclipse.wst.css.ui/PSEUDO=\#FFFFFF | null | null | null | null | null
 /instance/com.powerflasher.fdt.ui/MULTILINE_COMMENT_color=255,218,185
 /instance/org.eclipse.ui.editors/AbstractTextEditor.Color.Foreground.SystemDefault=false
@@ -441,7 +441,7 @@
 /instance/org.eclipse.dltk.ruby.ui/DLTK_number=255,255,255
 /instance/org.codehaus.groovy.eclipse.ui/semanticHighlighting.parameterVariable.enabled=true
 /instance/org.codehaus.groovy.eclipse.ui/semanticHighlighting.method.enabled=true
-@org.eclipse.dltk.validators.core=3.0.0.v20110423
+@org.eclipse.dltk.validators.core=4.0.0.201206120848
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.format_html_region=false
 /instance/org.eclipse.ui.workbench/ColorsAndFontsPreferencePage.selectedElement=CCONTENT_ASSIST_FOREGROUND_COLOR
 /instance/org.codehaus.groovy.eclipse.ui/semanticHighlighting.inheritedMethodInvocation.enabled=true
@@ -507,7 +507,7 @@
 /instance/org.eclipse.wst.xml.ui/doctypeExternalId=\#FFFFFF | null | null | null | null | null
 /instance/org.eclipse.cdt.ui/semanticHighlighting.staticMethod.enabled=true
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_before_comma_in_allocation_expression=do not insert
-@org.eclipse.wst.jsdt.web.core=1.0.401.v201108152113
+@org.eclipse.wst.jsdt.web.core=1.0.500.v201205241808
 /instance/com.dubture.twig.ui/editorColorKeyword=\#f3c0cb | \#292929 | true | false | false | false
 /instance/org.eclipse.jdt.launching/org.eclipse.jdt.launching.PREF_VM_XML=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\n<vmSettings defaultVM\="52,org.eclipse.jdt.internal.launching.macosx.MacOSXType8,Contents" defaultVMConnector\="">\n<vmType id\="org.eclipse.jdt.internal.launching.macosx.MacOSXType">\n<vm id\="Contents" name\="Java SE 6 (MacOS X Default)" path\="/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home"/>\n</vmType>\n</vmSettings>\n
 /instance/org.eclipse.php.ui/semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.InternalClassHighlighting.enabled=true
@@ -545,7 +545,7 @@
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_after_binary_operator=insert
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_after_comma_in_type_arguments=insert
 /instance/org.eclipse.wst.sse.ui/useAnnotationsPrefPage=true
-@org.eclipse.wst.sse.ui=1.3.2.v201201041522
+@org.eclipse.wst.sse.ui=1.3.100.v201204260100
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.compact_else_if=true
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_before_opening_paren_in_synchronized=insert
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.blank_lines_before_first_class_body_declaration=0
@@ -565,7 +565,7 @@
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.alignment_for_multiple_fields=16
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_before_comma_in_multiple_field_declarations=do not insert
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_after_comma_in_superinterfaces=insert
-/instance/org.eclipse.ui.workbench/org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\n<org.eclipse.ui.commands>\n<activeKeyConfiguration keyConfigurationId\="com.mulgasoft.emacsplusConfiguration"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="COMMAND+M"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="COMMAND+M"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="COMMAND+M"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="COMMAND+M"/>\n<keyBinding commandId\="com.mulgasoft.emacsplus.endBuffer" contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="COMMAND+SHIFT+&gt;"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.emacsAcceleratorConfiguration" keySequence\="ESC &gt;"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.emacsAcceleratorConfiguration" keySequence\="ESC &gt;"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="ESC &gt;"/>\n<keyBinding commandId\="com.mulgasoft.emacsplus.beginBuffer" contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="COMMAND+SHIFT+&lt;"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.emacsAcceleratorConfiguration" keySequence\="ESC &lt;"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="org.eclipse.ui.emacsAcceleratorConfiguration" keySequence\="ESC &lt;"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="ESC &lt;"/>\n<keyBinding commandId\="com.mulgasoft.emacsplus.queryReplace" contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="COMMAND+SHIFT+%"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="COMMAND+SHIFT+5"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="F3"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="F3"/>\n</org.eclipse.ui.commands>
+/instance/org.eclipse.ui.workbench/org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\n<org.eclipse.ui.commands>\n<activeKeyConfiguration keyConfigurationId\="com.mulgasoft.emacsplusConfiguration"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="F3"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="F3"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="ESC &gt;"/>\n<keyBinding commandId\="com.mulgasoft.emacsplus.endBuffer" contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="COMMAND+SHIFT+&gt;"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="CTRL+V"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="CTRL+V"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="COMMAND+V"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="COMMAND+V"/>\n<keyBinding commandId\="com.mulgasoft.emacsplus.scrollDown" contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="CTRL+SHIFT+V"/>\n<keyBinding contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="CTRL+SHIFT+V"/>\n<keyBinding commandId\="com.mulgasoft.emacsplus.scrollUp" contextId\="org.eclipse.ui.textEditorScope" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="CTRL+V"/>\n<keyBinding contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="org.eclipse.ui.defaultAcceleratorConfiguration" keySequence\="CTRL+G"/>\n<keyBinding commandId\="com.dubture.pdt.ui.generategetters" contextId\="org.eclipse.ui.contexts.window" keyConfigurationId\="com.mulgasoft.emacsplusConfiguration" keySequence\="CTRL+G"/>\n</org.eclipse.ui.commands>
 /instance/org.cfeclipse.cfml/javascriptColor=255,255,255
 /instance/org.epic.perleditor/literal2Color=255,160,122
 /instance/org.eclipse.ant.ui/org.eclipse.ant.ui.tagsColor=255,255,255
@@ -648,10 +648,10 @@
 /instance/org.python.pydev/KEYWORD_COLOR=0,255,255
 /instance/org.codehaus.groovy.eclipse.ui/semanticHighlighting.deprecatedMember.color=202,225,255
 /instance/org.eclipse.php.ui/semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.StaticMethodHighlighting.enabled=true
-@org.eclipse.pde.ui=3.6.100.v20120103_r372
+@org.eclipse.pde.ui=3.7.0.v20120605-203027
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.indent_body_declarations_compare_to_type_header=true
 /instance/org.epic.perleditor/keyword2Color=255,255,255
-@org.eclipse.ui.workbench=3.7.1.v20120104-1859
+@org.eclipse.ui.workbench=3.103.0.v20120530-1824
 /instance/com.powerflasher.fdt.ui/JAVADOC_TAG_color=191,62,255
 /instance/org.eclipse.jdt.ui/java_doc_tag=191,62,255
 /instance/org.eclipse.wst.css.ui/SEMI_COLON=\#FFFFFF | null | null | null | null | null
@@ -688,7 +688,7 @@
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_before_closing_paren_in_constructor_declaration=do not insert
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.XMLTagName_enabled=true
 /instance/org.eclipse.php.ui/semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.ConstantHighlighting.enabled=true
-@org.eclipse.core.resources=3.7.101.v20120125-1505
+@org.eclipse.core.resources=3.8.0.v20120522-2034
 /instance/org.python.pydev/EDITOR_MATCHING_BRACKETS_COLOR=255,255,255
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLComment_color=255,218,185
 /instance/org.eclipse.ui.editors/matchingTagIndicationColor=97,97,97
@@ -724,14 +724,14 @@
 /instance/org.eclipse.dltk.ruby.ui/DLTK_doc=255,127,36
 /instance/net.sourceforge.texlipse/crl.TexColor=255,236,139
 /instance/org.eclipse.wst.xml.ui/tagAttributeValue=\#FFA07A | null | null | null | null | null
-@org.eclipse.ui.ide=3.7.0.v20110928-1505
+@org.eclipse.ui.ide=3.8.0.v20120521-2329
 /instance/org.codehaus.groovy.eclipse.ui/groovy.editor.groovyDoc.link.enabled=true
-@org.eclipse.core.runtime=3.7.0.v20110110
+@org.eclipse.core.runtime=3.8.0.v20120521-2346
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.alignment_for_selector_in_method_invocation=16
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.StaticFunction_color=255,255,255
 /instance/com.adobe.flexide.mxml.core/mxmlComponentTagColor=\#FFEC8B
 /instance/org.eclipse.cdt.ui/semanticHighlighting.typeParameter.enabled=true
-@org.eclipse.dltk.core.index.sql.h2=3.0.0.v20110423
+@org.eclipse.dltk.core.index.sql.h2=4.0.0.201206120848
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.alignment_for_method_declaration=0
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.AS3SemanticHighlightGenerator.AS3.XMLText_enabled=true
 /instance/org.eclipse.dltk.ruby.ui/const_italic=false
@@ -826,7 +826,7 @@ file_export_version=3.0
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.alignment_for_arguments_in_method_invocation=16
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.Setter_enabled=true
 /instance/org.eclipse.jst.jsp.ui/tagAttributeEquals=\#FFFFFF | null | null | null | null | null
-@org.eclipse.ant.ui=3.5.101.v20120110-1739
+@org.eclipse.ant.ui=3.5.300.v20120523-1752
 /instance/org.python.pydev/PARENS_COLOR=255,255,255
 /instance/com.powerflasher.fdt.ui/SINGLELINE_COMMENT_color=255,218,185
 /instance/org.eclipse.php.ui/semanticHighlighting.org.eclipse.php.internal.ui.editor.highlighters.ConstantHighlighting.italic=false
@@ -926,7 +926,7 @@ file_export_version=3.0
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_after_comma_in_method_declaration_throws=insert
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_before_closing_brace_in_array_initializer=do not insert
 /instance/com.powerflasher.fdt.ui/AS_PROTECTED_color=0,255,255
-@org.eclipse.jdt.launching=3.6.1.v20111006_r372
+@org.eclipse.jdt.launching=3.6.100.v20120523-1953
 /instance/org.eclipse.wst.css.ui/ID=\#FFFFFF | null | null | null | null | null
 /instance/org.eclipse.cdt.ui/semanticHighlighting.typedef.enabled=true
 /instance/org.eclipse.jdt.core/org.eclipse.jdt.core.compiler.compliance=1.6
@@ -972,7 +972,7 @@ file_export_version=3.0
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLComponentTag_color=255,236,139
 /instance/net.sourceforge.texlipse/com.TexColor=255,218,185
 /instance/org.cfeclipse.cfml/htmTableTagColor=255,236,139
-@com.dubture.symfony.ui=1.0.75
+@com.dubture.symfony.ui=1.0.76
 /instance/org.eclipse.dltk.ruby.ui/DLTK_string=255,160,122
 /instance/com.adobe.flexide.css.core/cssMediaColor=\#00FFFF
 /instance/org.eclipse.wst.xml.ui/cdataBorder=\#FFFFFF | null | null | null | null | null
@@ -1031,7 +1031,7 @@ file_export_version=3.0
 /instance/org.codehaus.groovy.eclipse.ui/groovy.editor.highlight.strings.color=255,160,122
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.BasicSemanticHighlightGenerator.AS3.Getter_color=255,255,255
 /instance/org.codehaus.groovy.eclipse.ui/semanticHighlighting.typeArgument.color=75,156,233
-@org.eclipse.wst.xml.ui=1.1.202.v201112071516
+@org.eclipse.wst.xml.ui=1.1.300.v201205022014
 /instance/org.eclipse.ui.ide/tipsAndTricks=true
 /instance/org.eclipse.dltk.ui/sourceHoverBackgroundColor.SystemDefault=true
 /instance/de.walware.statet.r.ui/text_Rd_rdUnlistedTag.color=255,236,139
@@ -1054,10 +1054,10 @@ file_export_version=3.0
 /instance/net.sourceforge.texlipse/sqr.TexColor=255,236,139
 /instance/org.eclipse.pde.ui/editor.color.xml_comment=255,218,185
 /instance/org.eclipse.php.ui/cleanup.remove_trailing_whitespaces_all=true
-@org.eclipse.debug.ui=3.7.102.v20111129-1423_r372
+@org.eclipse.debug.ui=3.8.0.v20120530-1753
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.indent_statements_compare_to_body=true
-@org.eclipse.core.net=1.2.100.I20110511-0800
-@org.eclipse.dltk.ui=3.0.1.v20110823
+@org.eclipse.core.net=1.2.200.v20120522-1148
+@org.eclipse.dltk.ui=4.0.0.201206120848
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_before_opening_paren_in_while=insert
 /instance/com.dubture.pdt.formatter/jp.sourceforge.pdt_tools.formatter.insert_space_before_opening_angle_bracket_in_type_arguments=do not insert
 /instance/org.eclipse.jdt.ui/org.eclipse.jface.textfont=1|Monaco|11.0|0|COCOA|1|;
@@ -1075,7 +1075,7 @@ file_export_version=3.0
 /instance/org.eclipse.php.ui/org.eclipse.php.uihoverModifierMasks=org.eclipse.php.ui.editor.hover.BestMatchHover;0;org.eclipse.php.debug.ui.hovers.PHPDebugTextHover;0;org.eclipse.php.xdebug.ui.hover.XDebugTextHover;0;com.dubture.symfony.ui.routeHover;0;org.eclipse.php.ui.editor.hover.ProblemHover;0;org.eclipse.php.ui.editor.hover.PHPDocumentationHover;0;org.eclipse.php.ui.editor.hover.PHPSourceTextHover;4194304;org.eclipse.php.ui.editor.hover.PHPAnnotationTextHover;0;
 /instance/org.eclipse.cdt.ui/semanticHighlighting.method.color=255,255,255
 /instance/org.cfeclipse.cfml/defaultTextColor=255,255,255
-@org.eclipse.jdt.ui=3.7.2.v20120109-1427
+@org.eclipse.jdt.ui=3.8.0.v20120524-1551
 /instance/com.powerflasher.fdt.ui/com.powerflasher.fdt.ui.mxml.mxmlHighlightGenerator.AS3.MXMLAirApplicationTag_enabled=true
 @org.eclipse.php.server.core=3.0.1.v201201110400
 /instance/org.eclipse.jdt.ui/semanticHighlighting.number.color=255,255,255
