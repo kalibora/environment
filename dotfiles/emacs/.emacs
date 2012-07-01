@@ -3,33 +3,6 @@
 ;;;
 
 ;---------------------------------------------------
-; macro
-;---------------------------------------------------
-(defmacro exec-if-bound (sexplist)
-  "関数が存在する時だけ実行する。(car の fboundp を調べるだけ)"
-  `(if (fboundp (car ',sexplist))
-       ,sexplist))
-
-(defmacro defun-add-hook (hookname &rest sexplist)
-  "add-hook のエイリアス。引数を関数にパックして hook に追加する。"
-  `(add-hook ,hookname
-             (function (lambda () ,@sexplist))))
-
-(defun load-safe (loadlib)
-  "安全な load。読み込みに失敗してもそこで止まらない。"
-  ;; missing-ok で読んでみて、ダメならこっそり message でも出しておく
-  (let ((load-status (load loadlib t)))
-    (or load-status
-        (message (format "[load-safe] failed %s" loadlib)))
-    load-status))
-
-(defmacro eval-safe (&rest body)
-  "安全な評価。評価に失敗してもそこで止まらない。"
-  `(condition-case err
-       (progn ,@body)
-     (error (message "[eval-safe] %s" err))))
-
-;---------------------------------------------------
 ; 端末のwindowにタイトルを表示させたいんだけどうまくいかないのでコメントアウト
 ;---------------------------------------------------
 ;(setq title '("%b  "
@@ -147,17 +120,17 @@
 ;---------------------------------------------------
 ; モード切り替え
 ;---------------------------------------------------
-(defun php ()
+(defun m-php ()
   (interactive)
   (php-mode)
   (ac-mode)
 )
-(defun js ()
+(defun m-js ()
   (interactive)
   (javascript-mode)
   (ac-mode)
 )
-(defun html ()
+(defun m-html ()
   (interactive)
   (html-mode)
   (ac-mode)
@@ -204,7 +177,7 @@
 ;---------------------------------------------------
 ; defaultタブ幅
 ;---------------------------------------------------
-(setq default-tab-width 2)
+(setq default-tab-width 4)
 (setq-default indent-tabs-mode nil)
 
 ;---------------------------------------------------
@@ -214,8 +187,8 @@
           '(lambda ()
              (c-set-style "k&r")
              (progn
-               (setq tab-width 2)
-               (setq c-basic-offset 2 indent-tabs-mode nil))))
+               (setq tab-width 4)
+               (setq c-basic-offset 4 indent-tabs-mode nil))))
 
 ;---------------------------------------------------
 ; ruby-mode
@@ -251,18 +224,21 @@
 ;---------------------------------------------------
 ; php-mode
 ;---------------------------------------------------
-(load-library "php-mode")
 (require 'php-mode)
-
-(add-hook 'php-mode-user-hook
+(add-hook 'php-mode-hook
           '(lambda ()
+             (c-set-offset 'case-label '+)
+             (c-set-offset 'arglist-intro '+)
+             (c-set-offset 'arglist-cont 0)
+             (c-set-offset 'arglist-cont-nonempty '+)
+             (c-set-offset 'arglist-close 0)
              (setq tab-width 4)
              (setq c-basic-offset 4)
              (setq indent-tabs-mode nil)
-             (c-set-offset 'arglist-close 0)
-             (c-set-offset 'case-label c-basic-offset)
-             ))
+             )
+          )
 
+(custom-set-variables '(php-executable "/usr/bin/env/ php"))
 ; pearのコーディング規約に沿った設定
 ;(defun php-mode-hook ()
 ;  (setq tab-width 4
@@ -360,8 +336,8 @@
 ;---------------------------------------------------
 ; moccur
 ;---------------------------------------------------
-(eval-safe (require 'color-moccur))
-(eval-safe (load "moccur-edit"))
+(require 'color-moccur)
+(load "moccur-edit")
 (setq dmoccur-exclusion-mask
       (append '("\\~$" "\\.svn\\/\*") dmoccur-exclusion-mask))
 
