@@ -6,6 +6,7 @@
 [core]
 	quotepath = false
 	pager = less -R
+	excludesfile = /Users/kalibora/.gitignore
 [color]
 	diff = auto
 	status = auto
