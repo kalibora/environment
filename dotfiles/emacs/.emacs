@@ -113,6 +113,12 @@
 ;(eucjp)
 (utf8)
 
+; charset と coding-system の優先度設定
+; See http://nijino.homelinux.net/emacs/emacs23-ja.html
+(set-charset-priority 'ascii 'japanese-jisx0208 'latin-jisx0201
+                      'katakana-jisx0201 'iso-8859-1 'cp1252 'unicode)
+(set-coding-system-priority 'utf-8 'euc-jp 'iso-2022-jp 'cp932)
+
 ; See http://www.sakito.com/2010/05/mac-os-x-normalization.html
 (require 'ucs-normalize)
 (setq file-name-coding-system 'utf-8-hfs-unix)
