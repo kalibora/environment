@@ -17,6 +17,7 @@
 	ci = commit
 	st = status
 	br = branch
-	hist = log --pretty=format:\\\"%h %ad | %s%d [%an]\\\" --graph --date=short
+	hist = log --format=\"%h %ad | %s%d [%an]\" --graph --date=short
+	tree = log --graph --all --date=short --format=\"%x09%C(white)%ad%Creset %C(yellow)%h%Creset %s %C(cyan bold)[%an]%Creset %C(magenta reverse)%d%Creset\"
 [include]
 	path = .gitconfig.local
