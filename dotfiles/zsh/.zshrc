@@ -62,8 +62,8 @@ esac
 # See http://liosk.blog103.fc2.com/blog-entry-209.html
 autoload -Uz vcs_info
 setopt prompt_subst
-zstyle ':vcs_info:*' formats       '(%b) '
-zstyle ':vcs_info:*' actionformats '(%b|%a) '
+zstyle ':vcs_info:*' formats       '%b '
+zstyle ':vcs_info:*' actionformats '%b|%a '
 
 #PROMPT='%n@%m%(!.#.$) '
 #RPROMPT='[%~]'
