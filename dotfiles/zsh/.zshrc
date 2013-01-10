@@ -58,6 +58,13 @@ esac
 #--------------------------------------------------------------------
 # prompt & tiitle
 #--------------------------------------------------------------------
+
+# See http://liosk.blog103.fc2.com/blog-entry-209.html
+autoload -Uz vcs_info
+setopt prompt_subst
+zstyle ':vcs_info:*' formats       '(%b) '
+zstyle ':vcs_info:*' actionformats '(%b|%a) '
+
 #PROMPT='%n@%m%(!.#.$) '
 #RPROMPT='[%~]'
 PROMPT=$DYNAMIC_COLOR'%2m%(!.#.$) '$DEFAULT
@@ -65,6 +72,9 @@ RPROMPT=$DYNAMIC_COLOR'[%~]'$DEFAULT
 
 # term title
 precmd() {
+  LANG=en_US.UTF-8 vcs_info
+  RPROMPT=$DYNAMIC_COLOR'[${vcs_info_msg_0_}%~]'$DEFAULT
+
   TITLE=`print -P \[%m:%~\] $USER`
   echo -n "\e]2;$TITLE\a"
 }
