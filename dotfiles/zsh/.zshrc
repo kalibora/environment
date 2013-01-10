@@ -14,15 +14,26 @@ PATH=$HOME/bin:$HOME/local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr
 # environment
 #--------------------------------------------------------------------
 ENV=$HOME/.zshrc; export ENV
+export LESSCHARSET=utf-8
 
 #--------------------------------------------------------------------
 # php-version
 #--------------------------------------------------------------------
 export PHP_VERSIONS=$HOME/local/php/versions
-#source $(brew --prefix php-version)/php-version.sh && php-version 5.3.14 >/dev/null
-source $(brew --prefix php-version)/php-version.sh && php-version 5.4.4 >/dev/null
 
-export APACHE_PATH=$(brew --prefix httpd)
+which brew > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+    #source $(brew --prefix php-version)/php-version.sh && php-version 5.3.14 >/dev/null
+    source $(brew --prefix php-version)/php-version.sh && php-version 5.4.4 >/dev/null
+
+    export APACHE_PATH=$(brew --prefix httpd)
+fi
+
+#--------------------------------------------------------------------
+# nvm
+#--------------------------------------------------------------------
+export NVM_DIR=$HOME/.nvm
+test -f $NVM_DIR/nvm.sh && source $NVM_DIR/nvm.sh
 
 #--------------------------------------------------------------------
 # color
