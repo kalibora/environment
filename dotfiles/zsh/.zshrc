@@ -20,11 +20,12 @@ export LESSCHARSET=utf-8
 # php-version
 #--------------------------------------------------------------------
 export PHP_VERSIONS=$HOME/local/php/versions
+PHP_VERSION=5.4.4
 
 which brew > /dev/null 2>&1
 if [ $? -eq 0 ]; then
-    #source $(brew --prefix php-version)/php-version.sh && php-version 5.3.14 >/dev/null
-    source $(brew --prefix php-version)/php-version.sh && php-version 5.4.4 >/dev/null
+    PHP_VERSIONS_SH=$(brew --prefix php-version)/php-version.sh
+    test -f $PHP_VERSIONS_SH && source $PHP_VERSIONS_SH && php-version $PHP_VERSION >/dev/null
 
     export APACHE_PATH=$(brew --prefix httpd)
 fi
