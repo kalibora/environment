@@ -7,7 +7,7 @@
 escape              # コマンド文字とリテラルコマンド生成文字をCtrl+Zに変更
 startup_message  off    # 起動時のメッセージがうっとうしいのでOFFにする
 autodetach       on     # 不慮の事故で回線が切れたりしても自動でデタッチさせる
-shell            zsh    # 環境変数$SHELLを使わずにzshにする
+###shell            zsh    # 環境変数$SHELLを使わずにzshにする
 defscrollback    100000 # スクロールバックバッファサイズを変更
 vbell            off    # visual bell を OFF に
 defflow          off    # よくわからないけどCtrl+sとかが効かなくなるのを防ぐ？

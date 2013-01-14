@@ -56,7 +56,7 @@ case $HOST in
 esac
 
 #--------------------------------------------------------------------
-# prompt & tiitle
+# prompt & title
 #--------------------------------------------------------------------
 
 # See http://liosk.blog103.fc2.com/blog-entry-209.html
@@ -67,8 +67,14 @@ zstyle ':vcs_info:*' actionformats '%b|%a '
 
 #PROMPT='%n@%m%(!.#.$) '
 #RPROMPT='[%~]'
-PROMPT=$DYNAMIC_COLOR'%2m%(!.#.$) '$DEFAULT
-RPROMPT=$DYNAMIC_COLOR'[%~]'$DEFAULT
+#RPROMPT=$DYNAMIC_COLOR'[%~]'$DEFAULT
+if [ -n "${REMOTEHOST}${SSH_CONNECTION}" ]; then
+    # ssh
+    PROMPT=$DYNAMIC_COLOR'%n@%2m%(!.#.$) '$DEFAULT
+else
+    # no ssh(local)
+    PROMPT=$DYNAMIC_COLOR'%n%(!.#.$) '$DEFAULT
+fi
 
 # term title
 precmd() {
