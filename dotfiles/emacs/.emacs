@@ -90,6 +90,19 @@
 (define-key ctl-x-map "M" 'memo)
 
 ;---------------------------------------------------
+; 行末の折り返し
+;---------------------------------------------------
+(defun truncate-lines-on ()
+  (interactive)
+  (setq-default truncate-lines t)
+  (setq-default truncate-partial-width-windows t))
+
+(defun truncate-lines-off ()
+  (interactive)
+  (setq-default truncate-lines nil)
+  (setq-default truncate-partial-width-windows nil))
+
+;---------------------------------------------------
 ; 日本語
 ;---------------------------------------------------
 (defun eucjp ()
@@ -185,6 +198,21 @@
 ;---------------------------------------------------
 (setq default-tab-width 4)
 (setq-default indent-tabs-mode nil)
+
+(defun tab2 ()
+
+  (interactive)
+  (setq indent-tabs-mode nil)
+  (setq tab-width 2)
+  (setq c-basic-offset 2)
+  (setq javascript-indent-level 2))
+
+(defun tab4 ()
+  (interactive)
+  (setq indent-tabs-mode nil)
+  (setq tab-width 4)
+  (setq c-basic-offset 4)
+  (setq javascript-indent-level 4))
 
 ;---------------------------------------------------
 ; c-mode のタブ幅
