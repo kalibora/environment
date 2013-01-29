@@ -64,3 +64,7 @@ bind ^x
 # @see http://subtech.g.hatena.ne.jp/antipop/20070828/1188279794
 # @see http://at-aka.blogspot.com/2008/08/gnu-screen-screenrc.html
 markkeys h=^b:l=^f:$=^e:^u=^z:^d=^v
+
+# @see http://www.machu.jp/diary/20110527.html#p01
+deflog on
+logfile "logs/screen-%Y%m%d-%n.log"
