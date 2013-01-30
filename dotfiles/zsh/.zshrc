@@ -194,6 +194,7 @@ setopt autopushd                      # 自動でpushd
 setopt pushd_ignore_dups              # 重複はpushしない
 
 setopt extended_glob
+setopt transient_rprompt              # 最後の行だけRPROMPTを表示
 
 #--------------------------------------------------------------------
 # custome functions
