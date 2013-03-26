@@ -70,10 +70,10 @@ zstyle ':vcs_info:*' actionformats '%b|%a '
 #RPROMPT=$DYNAMIC_COLOR'[%~]'$DEFAULT
 if [ -n "${REMOTEHOST}${SSH_CONNECTION}" ]; then
     # ssh
-    PROMPT=$DYNAMIC_COLOR'%n@%2m%(!.#.$) '$DEFAULT
+    PROMPT=$DYNAMIC_COLOR'[%D %T] %n@%2m%(!.#.$) '$DEFAULT
 else
     # no ssh(local)
-    PROMPT=$DYNAMIC_COLOR'%n%(!.#.$) '$DEFAULT
+    PROMPT=$DYNAMIC_COLOR'[%D %T] %n%(!.#.$) '$DEFAULT
 fi
 
 # term title
