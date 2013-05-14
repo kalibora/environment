@@ -13,7 +13,7 @@ source .alias
 #--------------------------------------------------------------------
 # PATH
 #--------------------------------------------------------------------
-PATH=$HOME/bin:$HOME/local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+PATH=$PATH:$HOME/bin:$HOME/local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
 #--------------------------------------------------------------------
 # environment
