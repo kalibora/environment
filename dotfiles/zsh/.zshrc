@@ -3,7 +3,12 @@
 #--------------------------------------------------------------------
 # common source
 #--------------------------------------------------------------------
+HOST_LIST_DEV=()
+HOST_LIST_TEST=()
+HOST_LIST_PROD=()
+
 source .alias
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 #--------------------------------------------------------------------
 # PATH
@@ -54,6 +59,22 @@ case $HOST in
     *test*)          local DYNAMIC_COLOR=$BROWN;;
     *)               local DYNAMIC_COLOR=$MAGENTA;;
 esac
+
+for h in $HOST_LIST_DEV; do
+    if [ "$h" = "$HOST" ]; then
+        local DYNAMIC_COLOR=$GREEN
+    fi
+done
+for h in $HOST_LIST_TEST; do
+    if [ "$h" = "$HOST" ]; then
+        local DYNAMIC_COLOR=$BROWN
+    fi
+done
+for h in $HOST_LIST_PROD; do
+    if [ "$h" = "$HOST" ]; then
+        local DYNAMIC_COLOR=$MAGENTA
+    fi
+done
 
 #--------------------------------------------------------------------
 # prompt & title
