@@ -8,12 +8,13 @@ HOST_LIST_TEST=()
 HOST_LIST_PROD=()
 
 source .alias
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 #--------------------------------------------------------------------
 # PATH
 #--------------------------------------------------------------------
-PATH=$PATH:$HOME/bin:$HOME/local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+PATH=$HOME/bin:$HOME/local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 #--------------------------------------------------------------------
 # environment
