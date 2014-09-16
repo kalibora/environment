@@ -12,7 +12,7 @@ source .alias
 #--------------------------------------------------------------------
 # PATH
 #--------------------------------------------------------------------
-PATH=$HOME/bin:$HOME/local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+PATH=$HOME/bin:$HOME/local/bin:$HOME/.composer/vendor/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
 
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
@@ -41,6 +41,12 @@ fi
 #--------------------------------------------------------------------
 export NVM_DIR=$HOME/.nvm
 test -f $NVM_DIR/nvm.sh && source $NVM_DIR/nvm.sh
+
+#--------------------------------------------------------------------
+# go
+#--------------------------------------------------------------------
+export GOPATH=$HOME/.go
+PATH=$GOPATH/bin:$PATH
 
 #--------------------------------------------------------------------
 # color
