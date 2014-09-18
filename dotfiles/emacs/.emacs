@@ -33,19 +33,24 @@
 (add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
-;; パッケージ情報の更新
-(package-refresh-contents)
+(defun pkgupdate ()
+  (interactive)
 
-;; インストールするパッケージ
-(defvar my/favorite-packages
-  '(
-    go-mode
-    ))
+  ;; パッケージ情報の更新
+  (package-refresh-contents)
 
-;; my/favorite-packagesからインストールしていないパッケージをインストール
-(dolist (package my/favorite-packages)
-  (unless (package-installed-p package)
-    (package-install package)))
+  ;; インストールするパッケージ
+  (defvar my/favorite-packages
+    '(
+      go-mode
+      web-mode
+      ))
+
+  ;; my/favorite-packagesからインストールしていないパッケージをインストール
+  (dolist (package my/favorite-packages)
+    (unless (package-installed-p package)
+      (package-install package)))
+  )
 
 ;---------------------------------------------------
 ; alist
