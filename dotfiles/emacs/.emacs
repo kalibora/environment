@@ -63,7 +63,7 @@
 (add-to-list 'auto-mode-alist '("\\.mod\\'" .  sgml-mode))
 (add-to-list 'auto-mode-alist '("\\.yml$" .    yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.md$" .     markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.twig$" .   jinja2-mode))
+(add-to-list 'auto-mode-alist '("\\.twig$" .   web-mode))
 (add-to-list 'vc-handled-backends 'SVN)
 
 ;---------------------------------------------------
@@ -282,6 +282,18 @@
 ; jinja2-mode
 ;---------------------------------------------------
 (require 'jinja2-mode)
+
+;---------------------------------------------------
+; web-mode
+; See: http://web-mode.org/
+;---------------------------------------------------
+(setq web-mode-markup-indent-offset 2)
+(setq web-mode-css-indent-offset 2)
+(setq web-mode-code-indent-offset 2)
+(setq web-mode-style-padding 2)
+(setq web-mode-script-padding 2)
+(setq web-mode-block-padding 0)
+(setq web-mode-comment-style 2)
 
 ;---------------------------------------------------
 ; php-mode
