@@ -25,6 +25,29 @@
 (setq load-path (cons "~/.elisp/" load-path))
 
 ;---------------------------------------------------
+; package
+; See: http://emacs-jp.github.io/packages/package-management/package-el.html
+;---------------------------------------------------
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+;; パッケージ情報の更新
+(package-refresh-contents)
+
+;; インストールするパッケージ
+(defvar my/favorite-packages
+  '(
+    go-mode
+    ))
+
+;; my/favorite-packagesからインストールしていないパッケージをインストール
+(dolist (package my/favorite-packages)
+  (unless (package-installed-p package)
+    (package-install package)))
+
+;---------------------------------------------------
 ; alist
 ;---------------------------------------------------
 (add-to-list 'auto-mode-alist '("\\.tpl\\'" . php-mode))
