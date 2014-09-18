@@ -44,6 +44,11 @@
     '(
       go-mode
       web-mode
+      php-mode
+      color-moccur
+      jinja2-mode
+      markdown-mode
+      yaml-mode
       ))
 
   ;; my/favorite-packagesからインストールしていないパッケージをインストール
