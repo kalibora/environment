@@ -162,8 +162,10 @@ fi
 #--------------------------------------------------------------------
 # alias
 #--------------------------------------------------------------------
-alias d='cd_ext'
-alias fg='fg_ext'
+alias d='cd_stack_peco'
+alias dd='cd_stack_ext'
+alias dfind='cd_find_peco'
+alias fg='fg_peco'
 alias -g L="| $PAGER"
 alias -g M="| $PAGER"
 alias -g G='| grep'
@@ -227,12 +229,37 @@ setopt transient_rprompt              # 最後の行だけRPROMPTを表示
 #--------------------------------------------------------------------
 # custome functions
 #--------------------------------------------------------------------
-function cd_ext() {
+function cd_find_peco() {
+    # .git系など不可視フォルダは除外
+    local newdir="$(find . -maxdepth 5 -type d ! -path "*/.*"| peco)"
+    if [ -d "$newdir" ]; then
+        cd "$newdir"
+    fi
+}
+
+function cd_stack_peco() {
+    local newdir="$(dirs -p -l | peco | head -n 1)"
+    if [ ! -z "$newdir" ] ; then
+        cd "$newdir"
+    fi
+}
+
+function cd_stack_ext() {
     dirs -v
     echo -n "select number: "
     read newdir
     if [ $newdir ]; then
         cd +"$newdir"
+    fi
+}
+
+function fg_peco() {
+    local job=$(jobs | grep '^\[' | peco | head -n 1 | awk '{print $1}' | sed 's,\(\[\|\]\),,g')
+
+    if [ $job ]; then
+        \fg %"$job"
+    else
+        \fg
     fi
 }
 
@@ -246,3 +273,19 @@ function fg_ext() {
         \fg
     fi
 }
+
+function peco-select-history() {
+    local tac
+    if which tac > /dev/null; then
+        tac="tac"
+    else
+        tac="tail -r"
+    fi
+    BUFFER=$(history -n 1 | \
+        eval $tac | \
+        peco --query "$LBUFFER")
+    CURSOR=$#BUFFER
+    zle clear-screen
+}
+zle -N peco-select-history
+bindkey '^r' peco-select-history
