@@ -7,6 +7,7 @@
 	quotepath = false
 	pager = less -R
 	excludesfile = ~/.gitignore
+	editor = "emacs -nw"
 [color]
 	diff = auto
 	status = auto
