@@ -68,3 +68,7 @@ markkeys h=^b:l=^f:$=^e:^u=^z:^d=^v
 # @see http://www.machu.jp/diary/20110527.html#p01
 deflog on
 logfile "logs/screen-%Y%m%d-%n.log"
+
+# @see http://www.miuxmiu.com/archives/2012/11/21/screen_utf-8_display_garble_solution.html
+defencoding utf8
+encoding utf8 utf8
