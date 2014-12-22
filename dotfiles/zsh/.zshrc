@@ -10,21 +10,21 @@ HOST_LIST_PROD=()
 source .alias
 
 #--------------------------------------------------------------------
-# PATH
+# environment variables
 #--------------------------------------------------------------------
-PATH=$HOME/bin:$HOME/local/bin:$HOME/.composer/vendor/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export ENV=$HOME/.zshrc;
+export PATH=$HOME/bin:$HOME/local/bin:$HOME/.composer/vendor/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin
+export LANG=ja_JP.UTF-8;
+export EDITOR=emacs;
+export PAGER=less;
 
-[ -f ~/.zshrc.local ] && source ~/.zshrc.local
-
-#--------------------------------------------------------------------
-# environment
-#--------------------------------------------------------------------
-ENV=$HOME/.zshrc; export ENV
+# less
 export LESSCHARSET=utf-8
+export LESS='-X -i -F -R -P ?f%f:(stdin).  ?lb%lb?L/%L..  [?eEOF:?pb%pb\%..]'
+# See: http://nippondanji.blogspot.jp/2011/11/less.html
+export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
 
-#--------------------------------------------------------------------
 # php-version
-#--------------------------------------------------------------------
 export PHP_VERSIONS=$HOME/local/php/versions
 PHP_VERSION=5.4.4
 
@@ -36,17 +36,18 @@ if [ $? -eq 0 ]; then
     export APACHE_PATH=$(brew --prefix httpd)
 fi
 
-#--------------------------------------------------------------------
 # nvm
-#--------------------------------------------------------------------
 export NVM_DIR=$HOME/.nvm
 test -f $NVM_DIR/nvm.sh && source $NVM_DIR/nvm.sh
 
-#--------------------------------------------------------------------
 # go
-#--------------------------------------------------------------------
 export GOPATH=$HOME/.go
 PATH=$GOPATH/bin:$PATH
+
+#--------------------------------------------------------------------
+# overwrite local
+#--------------------------------------------------------------------
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
 #--------------------------------------------------------------------
 # color

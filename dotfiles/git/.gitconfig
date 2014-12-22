@@ -5,7 +5,7 @@
 	user = kalibora
 [core]
 	quotepath = false
-	pager = less -R
+	pager = less
 	excludesfile = ~/.gitignore
 	editor = "emacs -nw"
 [color]
