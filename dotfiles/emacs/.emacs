@@ -49,6 +49,7 @@
       jinja2-mode
       markdown-mode
       yaml-mode
+      scss-mode
       ))
 
   ;; my/favorite-packagesからインストールしていないパッケージをインストール
