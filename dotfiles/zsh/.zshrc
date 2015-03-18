@@ -20,7 +20,7 @@ export PAGER=less;
 
 # less
 export LESSCHARSET=utf-8
-export LESS='-X -i -F -R -P ?f%f:(stdin).  ?lb%lb?L/%L..  [?eEOF:?pb%pb\%..]'
+export LESS='-X -i -R -P ?f%f:(stdin).  ?lb%lb?L/%L..  [?eEOF:?pb%pb\%..]'
 # See: http://nippondanji.blogspot.jp/2011/11/less.html
 export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
 
