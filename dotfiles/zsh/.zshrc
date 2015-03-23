@@ -55,32 +55,49 @@ PATH=$GOPATH/bin:$PATH
 local BLACK=$'%{\e[1;30m%}'
 local RED=$'%{\e[1;31m%}'
 local GREEN=$'%{\e[1;32m%}'
-local BROWN=$'%{\e[1;33m%}'
+local YELLOW=$'%{\e[1;33m%}'
 local BLUE=$'%{\e[1;34m%}'
 local MAGENTA=$'%{\e[1;35m%}'
 local CYAN=$'%{\e[1;36m%}'
 local WHITE=$'%{\e[1;37m%}'
 local DEFAULT=$'%{\e[1;m%}'
+local MY_WHITE=$'\e[30;47m'
+local MY_GREEN=$'\e[30;42m'
+local MY_YELLOW=$'\e[30;43m'
+local MY_MAGENTA=$'\e[30;45m'
+local MY_DEFAULT=$'\e[1;m'
 
 case $HOST in
-    *dev* | *local*) local DYNAMIC_COLOR=$GREEN;;
-    *test*)          local DYNAMIC_COLOR=$BROWN;;
-    *)               local DYNAMIC_COLOR=$MAGENTA;;
+    *dev* | *local*)
+        local DYNAMIC_COLOR=$GREEN
+        local MY_COLOR=$MY_GREEN
+        ;;
+    *test*)
+        local DYNAMIC_COLOR=$YELLOW
+        local MY_COLOR=$MY_YELLOW
+        ;;
+    *)
+        local DYNAMIC_COLOR=$MAGENTA
+        local MY_COLOR=$MY_MAGENTA
+        ;;
 esac
 
 for h in $HOST_LIST_DEV; do
     if [ "$h" = "$HOST" ]; then
         local DYNAMIC_COLOR=$GREEN
+        local MY_COLOR=$MY_GREEN
     fi
 done
 for h in $HOST_LIST_TEST; do
     if [ "$h" = "$HOST" ]; then
-        local DYNAMIC_COLOR=$BROWN
+        local DYNAMIC_COLOR=$YELLOW
+        local MY_COLOR=$MY_YELLOW
     fi
 done
 for h in $HOST_LIST_PROD; do
     if [ "$h" = "$HOST" ]; then
         local DYNAMIC_COLOR=$MAGENTA
+        local MY_COLOR=$MY_MAGENTA
     fi
 done
 
@@ -104,6 +121,9 @@ else
     # no ssh(local)
     PROMPT=$DYNAMIC_COLOR'[%D %T] %n%(!.#.$) '$DEFAULT
 fi
+
+# mysql prompt
+export MYSQL_PS1=$MY_WHITE'[\R:\m:\s] \u@\h:\p '$MY_COLOR'\d'$MY_DEFAULT'\nmysql> '
 
 # term title
 precmd() {
