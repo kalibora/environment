@@ -239,6 +239,8 @@
   (setq indent-tabs-mode nil)
   (setq tab-width 2)
   (setq c-basic-offset 2)
+  (setq js-indent-level 2)
+  (setq css-indent-offset 2)
   (setq javascript-indent-level 2))
 
 (defun tab4 ()
@@ -246,6 +248,8 @@
   (setq indent-tabs-mode nil)
   (setq tab-width 4)
   (setq c-basic-offset 4)
+  (setq js-indent-level 4)
+  (setq css-indent-offset 4)
   (setq javascript-indent-level 4))
 
 ;---------------------------------------------------
