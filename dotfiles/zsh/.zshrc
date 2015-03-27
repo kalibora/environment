@@ -134,51 +134,94 @@ precmd() {
   echo -n "\e]2;$TITLE\a"
 }
 
+#--------------------------------------------------------------------
 # screen用title
 # 接続中のマシンの hostname と、
 # 最後に実行したコマンドを screen のステータスラインに表示する
 # @see http://viz.is-a-geek.com/~viz/cw/index.php?zsh#k6d9975e
 # @see http://web.archive.org/web/20051231065702/http://www.nijino.com/ari/diary/?20020614&to=200206141S1
-if [ -n "$WINDOW" ]; then
-    local -a host; host=`/bin/hostname | cut -d'.' -f1-2`
-    echo -n "\033k$host:t\033\\"
+#--------------------------------------------------------------------
+# if [ -n "$WINDOW" ]; then
+#     local -a host; host=`/bin/hostname | cut -d'.' -f1-2`
+#     echo -n "\033k$host:t\033\\"
 
-    chpwd () { echo -n "_`dirs`\\" }
-    preexec() {
-        # see [zsh-workers:13180]
-        # http://www.zsh.org/mla/workers/2000/msg03993.html
-        emulate -L zsh
-        local -a cmd; cmd=(${(z)2})
-        case $cmd[1] in
-            fg*)
-                if (( $#cmd == 1 )); then
-                    cmd=(builtin jobs -l %+)
-                else
-                    cmd=(builtin jobs -l $cmd[2])
-                fi
-                ;;
-            %*)
-                cmd=(builtin jobs -l $cmd[1])
-                ;;
-            cd)
-                if (( $#cmd == 2)); then
-                    cmd[1]=$cmd[2]
-                fi
-                ;&
-            *)
-                echo -n "k$host-$cmd[1]:t\\"
-                return
-                ;;
-        esac
+#     chpwd () { echo -n "_`dirs`\\" }
+#     preexec() {
+#         # see [zsh-workers:13180]
+#         # http://www.zsh.org/mla/workers/2000/msg03993.html
+#         emulate -L zsh
+#         local -a cmd; cmd=(${(z)2})
+#         case $cmd[1] in
+#             fg*)
+#                 if (( $#cmd == 1 )); then
+#                     cmd=(builtin jobs -l %+)
+#                 else
+#                     cmd=(builtin jobs -l $cmd[2])
+#                 fi
+#                 ;;
+#             %*)
+#                 cmd=(builtin jobs -l $cmd[1])
+#                 ;;
+#             cd)
+#                 if (( $#cmd == 2)); then
+#                     cmd[1]=$cmd[2]
+#                 fi
+#                 ;&
+#             *)
+#                 echo -n "k$host-$cmd[1]:t\\"
+#                 return
+#                 ;;
+#         esac
 
-        local -A jt; jt=(${(kv)jobtexts})
+#         local -A jt; jt=(${(kv)jobtexts})
 
-        $cmd >>(read num rest
-            cmd=(${(z)${(e):-\$jt$num}})
-            echo -n "k$host-$cmd[1]:t\\") 2>/dev/null
-    }
-    chpwd
+#         $cmd >>(read num rest
+#             cmd=(${(z)${(e):-\$jt$num}})
+#             echo -n "k$host-$cmd[1]:t\\") 2>/dev/null
+#     }
+#     chpwd
+# fi
+
+#--------------------------------------------------------------------
+# screen用title その2
+# See: http://superuser.com/questions/249293/rename-tmux-window-name-to-prompt-command-ps1-or-remote-ssh-hostname
+#--------------------------------------------------------------------
+getshorthostname() {
+    local host=`/bin/hostname | cut -d'.' -f1-2`
+    echo $host
+}
+
+makeshorthostname() {
+    local host=`echo $1 | cut -d'.' -f1-2`
+    echo $host
+}
+
+setscreentitletohost() {
+    local host=$1
+    echo -n "\033k${host}\033\\"
+}
+
+if [ -n "$STY" ]; then
+    setscreentitletohost `getshorthostname`
 fi
+
+sshscreen() {
+    inargs="$@"
+    if [ -n "$STY" ]; then
+        local host="${inargs#*@}"
+        host="${host% *}"
+        local user="${inargs%@*}"
+        user="${user#* }"
+
+        setscreentitletohost `makeshorthostname $host`
+    fi
+
+    \ssh $inargs
+
+    if [ -n "$STY" ]; then
+        setscreentitletohost `getshorthostname`
+    fi
+}
 
 #--------------------------------------------------------------------
 # ssh agent
@@ -203,6 +246,7 @@ alias d='cd_stack_peco'
 alias dd='cd_stack_ext'
 alias dfind='cd_find_peco'
 alias fg='fg_peco'
+alias ssh='sshscreen'
 alias -g L="| $PAGER"
 alias -g M="| $PAGER"
 alias -g G='| grep'
