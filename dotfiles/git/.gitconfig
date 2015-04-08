@@ -23,3 +23,5 @@
 	graph = log --graph --format=\"%x09%C(white)%ad%Creset %C(yellow)%h%Creset %s %C(cyan bold)[%an]%Creset %C(magenta reverse)%d%Creset\"
 [include]
 	path = .gitconfig.local
+[credential]
+	helper = osxkeychain
