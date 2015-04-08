@@ -7,12 +7,6 @@ alias cc='cc -Wall'
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
-#alias ll='ls -GFl'
-#alias la='ls -GFla'
-#alias lll='ls -Flat | head -30'
-#alias ls='ls -GF'
-alias ll='ls --color -Fl'
-alias la='ls --color -Fla'
 alias diff='diff -u'
 alias rdiff='rdiff -u'
 alias l='less'
@@ -22,3 +16,18 @@ alias sls='screen -ls'
 alias sr='screen -r'
 alias ack='ack --pager="less"'
 alias ag='ag --pager="less"'
+
+case "${OSTYPE}" in
+    darwin*)
+        alias ll='ls -GFl'
+        alias la='ls -GFla'
+        ;;
+    linux*)
+        #alias ll='ls -GFl'
+        #alias la='ls -GFla'
+        #alias lll='ls -Flat | head -30'
+        #alias ls='ls -GF'
+        alias ll='ls --color -Fl'
+        alias la='ls --color -Fla'
+        ;;
+esac
