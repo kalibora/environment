@@ -1,0 +1,35 @@
+# tap
+tap 'caskroom/cask'
+tap 'homebrew/brewdler'
+tap 'homebrew/php'
+
+# CLI
+brew 'emacs'
+brew 'gdbm'
+brew 'git'
+brew 'go'
+brew 'pcre'
+brew 'the_silver_searcher'
+brew 'xz'
+brew 'zsh'
+brew 'php56'
+brew 'composer'
+brew 'jq'
+brew 'peco'
+
+# GUI
+brew 'brew-cask'
+
+cask 'appcleaner'
+cask 'dropbox'
+cask 'firefox'
+cask 'google-chrome'
+cask 'google-japanese-ime'
+cask 'iterm2'
+cask 'karabiner'
+cask 'vagrant'
+cask 'virtualbox'
+cask 'coteditor'
+cask 'hoster'
+cask 'kindle'
+cask 'totalfinder'
