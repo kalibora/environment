@@ -16,6 +16,7 @@ brew 'php56'
 brew 'composer'
 brew 'jq'
 brew 'peco'
+brew 'tree'
 
 # GUI
 brew 'brew-cask'
