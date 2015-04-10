@@ -17,6 +17,7 @@ brew 'composer'
 brew 'jq'
 brew 'peco'
 brew 'tree'
+brew 'source-highlight'
 
 # GUI
 brew 'brew-cask'
@@ -35,3 +36,5 @@ cask 'hoster'
 cask 'kindle'
 cask 'totalfinder'
 cask '1password'
+cask 'xquartz'
+cask 'alfred'
