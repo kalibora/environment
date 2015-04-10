@@ -22,7 +22,10 @@ export PAGER=less;
 export LESSCHARSET=utf-8
 export LESS='-X -i -R -P ?f%f:(stdin).  ?lb%lb?L/%L..  [?eEOF:?pb%pb\%..]'
 # See: http://nippondanji.blogspot.jp/2011/11/less.html
-export LESSOPEN='| /usr/share/source-highlight/src-hilite-lesspipe.sh %s'
+which src-hilite-lesspipe.sh > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+    export LESSOPEN='| src-hilite-lesspipe.sh %s'
+fi
 
 # php-version
 export PHP_VERSIONS=$HOME/local/php/versions
@@ -335,7 +338,7 @@ function cd_stack_ext() {
 }
 
 function fg_peco() {
-    local job=$(jobs | grep '^\[' | peco | head -n 1 | awk '{print $1}' | sed 's,\(\[\|\]\),,g')
+    local job=$(jobs | grep '^\[' | peco | head -n 1 | awk '{print $1}' | sed -e "s/^.*\[\(.*\)\].*$/\1/")
 
     if [ $job ]; then
         \fg %"$job"
