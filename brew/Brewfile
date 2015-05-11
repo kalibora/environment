@@ -1,6 +1,7 @@
+# brew tap Homebrew/bundle
+
 # tap
 tap 'caskroom/cask'
-tap 'homebrew/brewdler'
 tap 'homebrew/php'
 
 # CLI
@@ -41,3 +42,4 @@ cask 'alfred'
 cask 'astah-community'
 cask 'licecap'
 cask 'mplayerx'
+cask 'chefdk'
