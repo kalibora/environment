@@ -68,7 +68,7 @@ local MY_WHITE=$'\e[30;47m'
 local MY_GREEN=$'\e[30;42m'
 local MY_YELLOW=$'\e[30;43m'
 local MY_MAGENTA=$'\e[30;45m'
-local MY_DEFAULT=$'\e[1;m'
+local MY_DEFAULT=$'\e[0;m'
 
 case $HOST in
     *dev* | *local*)
