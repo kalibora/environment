@@ -50,6 +50,7 @@
       markdown-mode
       yaml-mode
       scss-mode
+      jsx-mode
       ))
 
   ;; my/favorite-packagesからインストールしていないパッケージをインストール
@@ -70,6 +71,7 @@
 (add-to-list 'auto-mode-alist '("\\.yml$" .    yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.md$" .     markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.twig$" .   web-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
 (add-to-list 'vc-handled-backends 'SVN)
 
 ;---------------------------------------------------
