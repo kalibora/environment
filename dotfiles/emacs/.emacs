@@ -67,6 +67,7 @@
 (add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
 (add-to-list 'auto-mode-alist '("\\.conf\\'" . shell-script-mode))
 (add-to-list 'auto-mode-alist '("\\.SQL\\'" .  sql-mode))
+(add-to-list 'auto-mode-alist '("\\.hql\\'" .  sql-mode))
 (add-to-list 'auto-mode-alist '("\\.mod\\'" .  sgml-mode))
 (add-to-list 'auto-mode-alist '("\\.yml$" .    yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.md$" .     markdown-mode))
