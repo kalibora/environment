@@ -46,6 +46,7 @@
       yaml-mode
       scss-mode
       jsx-mode
+      editorconfig
       ))
 
   ;; my/favorite-packagesからインストールしていないパッケージをインストール
@@ -264,6 +265,12 @@
              (progn
                (setq tab-width 4)
                (setq c-basic-offset 4 indent-tabs-mode nil))))
+
+;---------------------------------------------------
+; editorconfig
+;---------------------------------------------------
+(require 'editorconfig)
+(editorconfig-mode 1)
 
 ;---------------------------------------------------
 ; ruby-mode
