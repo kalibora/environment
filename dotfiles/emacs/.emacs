@@ -20,11 +20,6 @@
 (setq ns-alternate-modifier (quote super))
 
 ;---------------------------------------------------
-; load-path
-;---------------------------------------------------
-(setq load-path (cons "~/.elisp/" load-path))
-
-;---------------------------------------------------
 ; package
 ; See: http://emacs-jp.github.io/packages/package-management/package-el.html
 ;---------------------------------------------------
@@ -58,6 +53,11 @@
     (unless (package-installed-p package)
       (package-install package)))
   )
+
+;---------------------------------------------------
+; load-path
+;---------------------------------------------------
+(setq load-path (cons "~/.elisp/" load-path))
 
 ;---------------------------------------------------
 ; alist
