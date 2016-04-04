@@ -19,6 +19,7 @@ brew 'jq'
 brew 'peco'
 brew 'tree'
 brew 'source-highlight'
+brew 'ansible'
 
 # GUI
 brew 'brew-cask'
