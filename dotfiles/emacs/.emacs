@@ -46,6 +46,7 @@
       yaml-mode
       scss-mode
       jsx-mode
+      coffee-mode
       editorconfig
       ))
 
@@ -349,6 +350,13 @@
 ; markdown-mode
 ;---------------------------------------------------
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
+
+;---------------------------------------------------
+; coffee-mode
+;---------------------------------------------------
+(require 'coffee-mode)
+
+(custom-set-variables '(coffee-tab-width 2))
 
 ;---------------------------------------------------
 ; 行番号表示 wb-line-number
