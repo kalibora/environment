@@ -43,6 +43,12 @@ fi
 export NVM_DIR=$HOME/.nvm
 test -f $NVM_DIR/nvm.sh && source $NVM_DIR/nvm.sh
 
+which brew > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+    NVM_SH=$(brew --prefix nvm)/nvm.sh
+    test -f $NVM_SH && source $NVM_SH
+fi
+
 # go
 export GOPATH=$HOME/.go
 PATH=$GOPATH/bin:$PATH
@@ -245,10 +251,19 @@ fi
 #--------------------------------------------------------------------
 # alias
 #--------------------------------------------------------------------
-alias d='cd_stack_peco'
-alias dd='cd_stack_ext'
-alias dfind='cd_find_peco'
-alias fg='fg_peco'
+which peco > /dev/null 2>&1
+if [ $? -eq 0 ]; then
+    alias d='cd_stack_peco'
+    alias fg='fg_peco'
+    alias dfind='cd_find_peco'
+
+    zle -N peco-select-history
+    bindkey '^r' peco-select-history
+else
+    alias d='cd_stack_ext'
+    alias fg='fg_ext'
+fi
+
 alias ssh='sshscreen'
 alias -g L="| $PAGER"
 alias -g M="| $PAGER"
@@ -373,5 +388,3 @@ function peco-select-history() {
 
     zle clear-screen
 }
-zle -N peco-select-history
-bindkey '^r' peco-select-history
