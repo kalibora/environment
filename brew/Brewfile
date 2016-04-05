@@ -21,6 +21,7 @@ brew 'tree'
 brew 'source-highlight'
 brew 'ansible'
 brew 'nvm'
+brew 'tmux'
 
 # GUI
 brew 'brew-cask'
