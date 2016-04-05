@@ -20,6 +20,7 @@ brew 'peco'
 brew 'tree'
 brew 'source-highlight'
 brew 'ansible'
+brew 'nvm'
 
 # GUI
 brew 'brew-cask'
