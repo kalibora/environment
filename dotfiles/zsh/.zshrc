@@ -53,6 +53,10 @@ fi
 export GOPATH=$HOME/.go
 PATH=$GOPATH/bin:$PATH
 
+# tmuxinator
+TMUXINATOR_SH=~/.bin/tmuxinator.zsh
+test -f $TMUXINATOR_SH && source $TMUXINATOR_SH
+
 #--------------------------------------------------------------------
 # overwrite local
 #--------------------------------------------------------------------
