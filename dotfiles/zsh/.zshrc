@@ -36,7 +36,10 @@ if [ $? -eq 0 ]; then
     PHP_VERSIONS_SH=$(brew --prefix php-version)/php-version.sh
     test -f $PHP_VERSIONS_SH && source $PHP_VERSIONS_SH && php-version $PHP_VERSION >/dev/null
 
-    export APACHE_PATH=$(brew --prefix httpd)
+    brew list | grep httpd > /dev/null 2>&1
+    if [ $? -eq 0 ]; then
+        export APACHE_PATH=$(brew --prefix httpd)
+    fi
 fi
 
 # nvm
