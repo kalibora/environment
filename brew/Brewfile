@@ -24,6 +24,10 @@ brew 'nvm'
 brew 'tmux'
 brew 'wget'
 
+# For build php
+brew 're2c'
+brew 'libmcrypt'
+
 # GUI
 brew 'brew-cask'
 

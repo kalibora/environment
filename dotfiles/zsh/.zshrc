@@ -28,21 +28,30 @@ if [ $? -eq 0 ]; then
 fi
 
 #--------------------------------------------------------------------
+# phpenv
+#--------------------------------------------------------------------
+export PHPENV_ROOT="$HOME/.phpenv"
+if [ -d "${PHPENV_ROOT}" ]; then
+    export PATH="${PHPENV_ROOT}/bin:${PATH}"
+    eval "$(phpenv init -)"
+fi
+
+#--------------------------------------------------------------------
 # php-version
 #--------------------------------------------------------------------
-export PHP_VERSIONS=$HOME/local/php/versions
-PHP_VERSION=5.4.4
+# export PHP_VERSIONS=$HOME/local/php/versions
+# PHP_VERSION=5.4.4
 
-which brew > /dev/null 2>&1
-if [ $? -eq 0 ]; then
-    PHP_VERSIONS_SH=$(brew --prefix php-version)/php-version.sh
-    test -f $PHP_VERSIONS_SH && source $PHP_VERSIONS_SH && php-version $PHP_VERSION >/dev/null
+# which brew > /dev/null 2>&1
+# if [ $? -eq 0 ]; then
+#     PHP_VERSIONS_SH=$(brew --prefix php-version)/php-version.sh
+#     test -f $PHP_VERSIONS_SH && source $PHP_VERSIONS_SH && php-version $PHP_VERSION >/dev/null
 
-    brew list | grep httpd > /dev/null 2>&1
-    if [ $? -eq 0 ]; then
-        export APACHE_PATH=$(brew --prefix httpd)
-    fi
-fi
+#     brew list | grep httpd > /dev/null 2>&1
+#     if [ $? -eq 0 ]; then
+#         export APACHE_PATH=$(brew --prefix httpd)
+#     fi
+# fi
 
 #--------------------------------------------------------------------
 # nvm
