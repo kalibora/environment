@@ -27,7 +27,9 @@ if [ $? -eq 0 ]; then
     export LESSOPEN='| src-hilite-lesspipe.sh %s'
 fi
 
+#--------------------------------------------------------------------
 # php-version
+#--------------------------------------------------------------------
 export PHP_VERSIONS=$HOME/local/php/versions
 PHP_VERSION=5.4.4
 
@@ -42,7 +44,9 @@ if [ $? -eq 0 ]; then
     fi
 fi
 
+#--------------------------------------------------------------------
 # nvm
+#--------------------------------------------------------------------
 export NVM_DIR=$HOME/.nvm
 test -f $NVM_DIR/nvm.sh && source $NVM_DIR/nvm.sh
 
@@ -52,11 +56,15 @@ if [ $? -eq 0 ]; then
     test -f $NVM_SH && source $NVM_SH
 fi
 
+#--------------------------------------------------------------------
 # go
+#--------------------------------------------------------------------
 export GOPATH=$HOME/.go
 PATH=$GOPATH/bin:$PATH
 
+#--------------------------------------------------------------------
 # tmuxinator
+#--------------------------------------------------------------------
 TMUXINATOR_SH=~/.bin/tmuxinator.zsh
 test -f $TMUXINATOR_SH && source $TMUXINATOR_SH
 
