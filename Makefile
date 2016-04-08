@@ -38,6 +38,11 @@ phpenv-enable-gmp: ## Add --with-gmp into default_configure_options
 phpenv-ini-link: ## Symlink php ini file
 	cd ./php && ./symlink.sh -fv
 
+.PHONY: td-install
+td-install:  ## Install td CLI. See: https://docs.treasuredata.com/articles/command-line
+	open 'https://docs.treasuredata.com/articles/command-line'
+	open 'http://ybi-docs.idcfcloud.com/articles/command-line'
+
 .PHONY: zlib
 zlib: ## Install zlib for mac. See: http://stackoverflow.com/questions/23749530/brew-install-zlib-devel-on-mac-os-x-mavericks
 	xcode-select --install
