@@ -29,6 +29,11 @@ tmuxinator-setup: ## Setup tmuxinator
 phpenv: ## Install phpenv
 	curl -L http://git.io/phpenv-installer | bash
 
+PHPENV_DEFAULT_CONFIGURE_OPTIONS=${HOME}/.phpenv/plugins/php-build/share/php-build/default_configure_options
+.PHONY: phpenv-configure-gmp
+phpenv-enable-gmp: ## Add --with-gmp into default_configure_options
+	grep 'with-gmp' ${PHPENV_DEFAULT_CONFIGURE_OPTIONS} || echo '--with-gmp' >> ${PHPENV_DEFAULT_CONFIGURE_OPTIONS}
+
 .PHONY: zlib
 zlib: ## Install zlib for mac. See: http://stackoverflow.com/questions/23749530/brew-install-zlib-devel-on-mac-os-x-mavericks
 	xcode-select --install
