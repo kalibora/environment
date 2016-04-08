@@ -34,6 +34,10 @@ PHPENV_DEFAULT_CONFIGURE_OPTIONS=${HOME}/.phpenv/plugins/php-build/share/php-bui
 phpenv-enable-gmp: ## Add --with-gmp into default_configure_options
 	grep 'with-gmp' ${PHPENV_DEFAULT_CONFIGURE_OPTIONS} || echo '--with-gmp' >> ${PHPENV_DEFAULT_CONFIGURE_OPTIONS}
 
+.PHONY: phpenv-ini-link
+phpenv-ini-link: ## Symlink php ini file
+	cd ./php && ./symlink.sh -fv
+
 .PHONY: zlib
 zlib: ## Install zlib for mac. See: http://stackoverflow.com/questions/23749530/brew-install-zlib-devel-on-mac-os-x-mavericks
 	xcode-select --install
