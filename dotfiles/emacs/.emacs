@@ -48,6 +48,10 @@
       jsx-mode
       coffee-mode
       editorconfig
+      swift-mode
+      helm
+      projectile
+      helm-projectile
       ))
 
   ;; my/favorite-packagesからインストールしていないパッケージをインストール
@@ -269,6 +273,31 @@
              (progn
                (setq tab-width 4)
                (setq c-basic-offset 4 indent-tabs-mode nil))))
+
+;---------------------------------------------------
+; helm
+;---------------------------------------------------
+;(setq helm-ff-lynx-style-map nil)
+(require 'helm-config)
+(helm-mode 1)
+
+(define-key global-map (kbd "M-x")     'helm-M-x)
+;(define-key global-map (kbd "C-x C-f") 'helm-find-files)
+;(define-key global-map (kbd "C-x b")   'helm-buffers-list)
+
+(add-to-list 'helm-completing-read-handlers-alist '(find-file . nil))
+
+(define-key helm-map (kbd "C-h") 'delete-backward-char)
+(define-key helm-read-file-map (kbd "TAB") 'helm-execute-persistent-action)
+(define-key helm-find-files-map (kbd "TAB") 'helm-execute-persistent-action)
+;(define-key helm-find-files-map (kbd "<left>") 'helm-execute-persistent-action)
+;(define-key helm-find-files-map (kbd "<right>") 'helm-execute-persistent-action)
+
+
+; projectile
+(projectile-global-mode)
+(setq projectile-completion-system 'helm)
+(helm-projectile-on)
 
 ;---------------------------------------------------
 ; editorconfig
