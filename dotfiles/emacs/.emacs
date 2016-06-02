@@ -50,6 +50,7 @@
       editorconfig
       swift-mode
       helm
+      helm-ag
       projectile
       helm-projectile
       ))
@@ -294,7 +295,10 @@
 ;(define-key helm-find-files-map (kbd "<right>") 'helm-execute-persistent-action)
 
 
+;---------------------------------------------------
 ; projectile
+;---------------------------------------------------
+(setq projectile-keymap-prefix (kbd "C-x p"))
 (projectile-global-mode)
 (setq projectile-completion-system 'helm)
 (helm-projectile-on)
