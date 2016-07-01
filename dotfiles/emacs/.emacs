@@ -53,6 +53,7 @@
       helm-ag
       projectile
       helm-projectile
+      flycheck
       ))
 
   ;; my/favorite-packagesからインストールしていないパッケージをインストール
@@ -393,6 +394,11 @@
 (require 'coffee-mode)
 
 (custom-set-variables '(coffee-tab-width 2))
+
+;---------------------------------------------------
+; flycheck
+;---------------------------------------------------
+(add-hook 'after-init-hook #'global-flycheck-mode)
 
 ;---------------------------------------------------
 ; 行番号表示 wb-line-number
