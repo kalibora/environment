@@ -54,6 +54,7 @@
       projectile
       helm-projectile
       flycheck
+      string-inflection
       ))
 
   ;; my/favorite-packagesからインストールしていないパッケージをインストール
@@ -399,6 +400,14 @@
 ; flycheck
 ;---------------------------------------------------
 (add-hook 'after-init-hook #'global-flycheck-mode)
+
+;---------------------------------------------------
+; string-inflection
+;---------------------------------------------------
+(require 'string-inflection)
+
+;; default
+(global-set-key (kbd "C-c C-u") 'string-inflection-all-cycle)
 
 ;---------------------------------------------------
 ; 行番号表示 wb-line-number
