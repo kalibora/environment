@@ -53,6 +53,10 @@ man-vagrant:  ## Manually install Docker for Mac
 man-docker:  ## Manually install VirtualBox and Vagrant
 	open 'https://www.docker.com/docker-mac'
 
+.PHONY: man-composer
+man-composer:  ## Manually install Composer
+	open 'https://getcomposer.org/download/'
+
 .PHONY: zlib
 zlib: ## Install zlib for mac. See: http://stackoverflow.com/questions/23749530/brew-install-zlib-devel-on-mac-os-x-mavericks
 	xcode-select --install
