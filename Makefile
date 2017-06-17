@@ -39,15 +39,19 @@ phpenv-customize-configure: ## Customize default_configure_options
 phpenv-ini-link: ## Symlink php ini file
 	cd ./php && ./symlink.sh -fv
 
-.PHONY: td-install
-td-install:  ## Install td CLI. See: https://docs.treasuredata.com/articles/command-line
+.PHONY: man-td
+man-td:  ## Manually install td CLI. See: https://docs.treasuredata.com/articles/command-line
 	open 'https://docs.treasuredata.com/articles/command-line'
 	open 'http://ybi-docs.idcfcloud.com/articles/command-line'
 
-.PHONY: vagrant-install
-vagrant-install:  ## Install VirtualBox and Vagrant
+.PHONY: man-vagrant
+man-vagrant:  ## Manually install Docker for Mac
 	open 'https://www.virtualbox.org/'
 	open 'https://www.vagrantup.com/'
+
+.PHONY: man-docker
+man-docker:  ## Manually install VirtualBox and Vagrant
+	open 'https://www.docker.com/docker-mac'
 
 .PHONY: zlib
 zlib: ## Install zlib for mac. See: http://stackoverflow.com/questions/23749530/brew-install-zlib-devel-on-mac-os-x-mavericks
