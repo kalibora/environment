@@ -44,6 +44,11 @@ td-install:  ## Install td CLI. See: https://docs.treasuredata.com/articles/comm
 	open 'https://docs.treasuredata.com/articles/command-line'
 	open 'http://ybi-docs.idcfcloud.com/articles/command-line'
 
+.PHONY: vagrant-install
+vagrant-install:  ## Install VirtualBox and Vagrant
+	open 'https://www.virtualbox.org/'
+	open 'https://www.vagrantup.com/'
+
 .PHONY: zlib
 zlib: ## Install zlib for mac. See: http://stackoverflow.com/questions/23749530/brew-install-zlib-devel-on-mac-os-x-mavericks
 	xcode-select --install
