@@ -25,8 +25,11 @@ brew 'wget'
 
 # For build php
 brew 're2c'
-brew 'libmcrypt'
 brew 'gmp'
+brew 'icu4c'
+brew 'libmcrypt'
+brew 'libjpeg'
+brew 'libpng'
 
 # GUI
 # brew 'brew-cask'

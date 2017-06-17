@@ -30,12 +30,10 @@ phpenv: ## Install phpenv
 	curl -L http://git.io/phpenv-installer | bash
 
 PHPENV_DEFAULT_CONFIGURE_OPTIONS=${HOME}/.phpenv/plugins/php-build/share/php-build/default_configure_options
-ICU_DIR=$(shell brew --prefix icu4c)
 .PHONY: phpenv-customize-configure
 phpenv-customize-configure: ## Customize default_configure_options
-	grep 'with-gmp' ${PHPENV_DEFAULT_CONFIGURE_OPTIONS} || echo '--with-gmp' >> ${PHPENV_DEFAULT_CONFIGURE_OPTIONS}
-	grep 'enable-intl' ${PHPENV_DEFAULT_CONFIGURE_OPTIONS} || echo "--enable-intl --with-icu-dir=${ICU_DIR}" >> ${PHPENV_DEFAULT_CONFIGURE_OPTIONS}
-	grep 'enable-opcache' ${PHPENV_DEFAULT_CONFIGURE_OPTIONS} || echo '--enable-opcache' >> ${PHPENV_DEFAULT_CONFIGURE_OPTIONS}
+	./bin/fix_phpenv_configure.php ${PHPENV_DEFAULT_CONFIGURE_OPTIONS} > ${PHPENV_DEFAULT_CONFIGURE_OPTIONS}.tmp
+	mv ${PHPENV_DEFAULT_CONFIGURE_OPTIONS}.tmp ${PHPENV_DEFAULT_CONFIGURE_OPTIONS}
 
 .PHONY: phpenv-ini-link
 phpenv-ini-link: ## Symlink php ini file
