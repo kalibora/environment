@@ -30,6 +30,7 @@ brew 'icu4c'
 brew 'libmcrypt'
 brew 'libjpeg'
 brew 'libpng'
+brew 'libxml2'
 
 # GUI
 # brew 'brew-cask'
