@@ -85,6 +85,19 @@ TMUXINATOR_SH=~/.bin/tmuxinator.zsh
 test -f $TMUXINATOR_SH && source $TMUXINATOR_SH
 
 #--------------------------------------------------------------------
+# GCP
+#--------------------------------------------------------------------
+export GCPPATH=$HOME/Applications/google-cloud-sdk
+
+if [ -f "${GCPPATH}/path.zsh.inc" ]; then
+    source "${GCPPATH}/path.zsh.inc";
+fi
+
+if [ -f "${GCPPATH}/completion.zsh.inc" ]; then
+    source "${GCPPATH}/completion.zsh.inc";
+fi
+
+#--------------------------------------------------------------------
 # overwrite local
 #--------------------------------------------------------------------
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
