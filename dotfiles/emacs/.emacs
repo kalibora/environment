@@ -410,6 +410,16 @@
 ;; default
 (global-set-key (kbd "C-c C-u") 'string-inflection-all-cycle)
 
+                                        ;
+;---------------------------------------------------
+; twittering-mode
+;---------------------------------------------------
+(when (require 'twittering-mode nil t)
+  ;(setq twittering-icon-mode t)
+  (setq twittering-timer-interval 300)
+  (setq twittering-use-master-password t)
+)
+
 ;---------------------------------------------------
 ; 行番号表示 wb-line-number
 ;---------------------------------------------------
