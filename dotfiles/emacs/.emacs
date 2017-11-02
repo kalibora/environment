@@ -55,6 +55,7 @@
       helm-projectile
       flycheck
       string-inflection
+      twittering-mode
       ))
 
   ;; my/favorite-packagesからインストールしていないパッケージをインストール
