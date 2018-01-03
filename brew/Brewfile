@@ -31,6 +31,9 @@ brew 'libmcrypt'
 brew 'libjpeg'
 brew 'libpng'
 brew 'libxml2'
+brew 'openssl
+brew 'autoconf'
+brew 'automake'
 
 # GUI
 # brew 'brew-cask'
