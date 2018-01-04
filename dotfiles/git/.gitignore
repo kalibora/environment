@@ -2,3 +2,5 @@
 phpunit.xml
 *.ignore
 *~
+.ruby-version
+.envrc
