@@ -303,6 +303,16 @@ if [ $? -eq 0 ]; then
 
     zle -N peco-select-history
     bindkey '^r' peco-select-history
+
+    which ghq > /dev/null 2>&1
+    if [ $? -eq 0 ]; then
+        alias g='cd $(ghq root)/$(ghq list | peco)'
+
+        which hub > /dev/null 2>&1
+        if [ $? -eq 0 ]; then
+            alias gh='hub browse $(ghq list | peco | cut -d "/" -f 2,3)'
+        fi
+    fi
 else
     alias d='cd_stack_ext'
     alias fg='fg_ext'

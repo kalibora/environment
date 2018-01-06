@@ -22,6 +22,8 @@ brew 'ansible'
 brew 'nvm'
 brew 'tmux'
 brew 'wget'
+brew 'ghq'
+brew 'hub'
 
 # For build php
 brew 're2c'
