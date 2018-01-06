@@ -25,18 +25,12 @@ tmuxinator-setup: ## Setup tmuxinator
 	mkdir -p ~/.bin
 	mv tmuxinator.zsh ~/.bin
 
-.PHONY: phpenv
-phpenv: ## Install phpenv
-	curl -L http://git.io/phpenv-installer | bash
+.PHONY: man-php-build
+man-php-build: ## Manually install php-build
+	open 'https://qiita.com/Hiraku/items/33372d2c60b3ceb26e52'
 
-PHPENV_DEFAULT_CONFIGURE_OPTIONS=${HOME}/.phpenv/plugins/php-build/share/php-build/default_configure_options
-.PHONY: phpenv-customize-configure
-phpenv-customize-configure: ## Customize default_configure_options
-	./bin/fix_phpenv_configure.php ${PHPENV_DEFAULT_CONFIGURE_OPTIONS} > ${PHPENV_DEFAULT_CONFIGURE_OPTIONS}.tmp
-	mv ${PHPENV_DEFAULT_CONFIGURE_OPTIONS}.tmp ${PHPENV_DEFAULT_CONFIGURE_OPTIONS}
-
-.PHONY: phpenv-ini-link
-phpenv-ini-link: ## Symlink php ini file
+.PHONY: php-build-ini-link
+php-build-ini-link: ## Symlink php ini file
 	cd ./php && ./symlink.sh -fv
 
 .PHONY: man-td

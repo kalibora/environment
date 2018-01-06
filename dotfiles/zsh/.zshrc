@@ -28,13 +28,19 @@ if [ $? -eq 0 ]; then
 fi
 
 #--------------------------------------------------------------------
+# php-build
+#--------------------------------------------------------------------
+export PHP_BUILD_EXTRA_MAKE_ARGUMENTS=-j4
+export PHP_BUILD_CONFIGURE_OPTS="--with-gmp --enable-opcache"
+
+#--------------------------------------------------------------------
 # phpenv
 #--------------------------------------------------------------------
-export PHPENV_ROOT="$HOME/.phpenv"
-if [ -d "${PHPENV_ROOT}" ]; then
-    export PATH="${PHPENV_ROOT}/bin:${PATH}"
-    eval "$(phpenv init -)"
-fi
+# export PHPENV_ROOT="$HOME/.phpenv"
+# if [ -d "${PHPENV_ROOT}" ]; then
+#     export PATH="${PHPENV_ROOT}/bin:${PATH}"
+#     eval "$(phpenv init -)"
+# fi
 
 #--------------------------------------------------------------------
 # php-version

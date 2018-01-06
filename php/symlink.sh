@@ -15,7 +15,7 @@ do
     esac
 done
 
-for confdir in `find $HOME/.phpenv/versions -name 'conf.d' -type d`
+for confdir in `find $HOME/.php -name 'conf.d' -type d`
 do
     for path in `find $DIR -type f -name '*.ini'`
     do
