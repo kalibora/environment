@@ -37,6 +37,7 @@ eval "$(direnv hook zsh)"
 #--------------------------------------------------------------------
 export PHP_BUILD_EXTRA_MAKE_ARGUMENTS=-j4
 export PHP_BUILD_CONFIGURE_OPTS="--with-gmp --enable-opcache"
+export PHP_BUILD_INSTALL_EXTENSION="apcu=@"
 
 #--------------------------------------------------------------------
 # phpenv
