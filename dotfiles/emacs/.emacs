@@ -50,6 +50,7 @@
       editorconfig
       swift-mode
       typescript-mode
+      mustache-mode
       helm
       helm-ag
       projectile
@@ -85,6 +86,7 @@
 (add-to-list 'auto-mode-alist '("\\.twig$" .   web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+(add-to-list 'auto-mode-alist '("\\.mustache\\'" . mustache-mode))
 (add-to-list 'vc-handled-backends 'SVN)
 
 ;---------------------------------------------------
