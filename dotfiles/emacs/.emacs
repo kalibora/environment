@@ -58,6 +58,8 @@
       flycheck
       string-inflection
       twittering-mode
+      dockerfile-mode
+      docker-compose-mode
       ))
 
   ;; my/favorite-packagesからインストールしていないパッケージをインストール
