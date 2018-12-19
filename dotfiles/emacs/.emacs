@@ -60,6 +60,7 @@
       twittering-mode
       dockerfile-mode
       docker-compose-mode
+      dotenv-mode
       ))
 
   ;; my/favorite-packagesからインストールしていないパッケージをインストール
@@ -89,6 +90,7 @@
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . mustache-mode))
+(add-to-list 'auto-mode-alist '("\\.env\\..*\\'" . dotenv-mode))
 (add-to-list 'vc-handled-backends 'SVN)
 
 ;---------------------------------------------------
