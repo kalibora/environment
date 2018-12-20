@@ -242,9 +242,7 @@
        '(
          ("\\.html$" . "insert.html")
          ("\\.pl$" . "insert.pl")
-         ("\\.class.php$" . "insert.class.php")
          ("\\.php$" . "insert.php")
-         ("\\.inc$" . "insert.php")
          (html-mode . "insert.html")
          (php-mode . "insert.php")
          (perl-mode . "insert.pl")
