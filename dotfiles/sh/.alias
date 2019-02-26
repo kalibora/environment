@@ -15,8 +15,9 @@ alias rlwrap='rlwrap -s 1000000'
 alias sls='screen -ls'
 alias sr='screen -r'
 alias ack='ack --pager="less"'
-alias ag='ag --ignore=tests --ignore=Tests --pager="less"'
-alias agt='ag --pager="less"'
+alias ag='\ag --ignore=tests --ignore=Tests --pager="less"'
+alias agt='\ag --file-search-regex="tests|Tests" --pager="less"'
+alias aga='\ag --pager="less"'
 
 case "${OSTYPE}" in
     darwin*)
