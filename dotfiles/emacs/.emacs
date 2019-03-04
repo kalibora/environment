@@ -61,6 +61,7 @@
       dockerfile-mode
       docker-compose-mode
       dotenv-mode
+      nginx-mode
       ))
 
   ;; my/favorite-packagesからインストールしていないパッケージをインストール
@@ -91,6 +92,7 @@
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . mustache-mode))
 (add-to-list 'auto-mode-alist '("\\.env\\..*\\'" . dotenv-mode))
+(add-to-list 'auto-mode-alist '("nginx\\(.*\\).conf[^/]*$" . nginx-mode))
 (add-to-list 'vc-handled-backends 'SVN)
 
 ;---------------------------------------------------
