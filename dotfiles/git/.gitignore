@@ -4,3 +4,4 @@ phpunit.xml
 *~
 .ruby-version
 .envrc
+.ac-php-conf.json

@@ -29,6 +29,7 @@
 (package-initialize)
 
 (defun pkgupdate ()
+  "Update packages."
   (interactive)
 
   ;; パッケージ情報の更新
@@ -37,6 +38,7 @@
   ;; インストールするパッケージ
   (defvar my/favorite-packages
     '(
+      company
       go-mode
       web-mode
       php-mode
@@ -62,6 +64,7 @@
       docker-compose-mode
       dotenv-mode
       nginx-mode
+      company-php
       ))
 
   ;; my/favorite-packagesからインストールしていないパッケージをインストール
@@ -199,17 +202,17 @@
 (defun m-php ()
   (interactive)
   (php-mode)
-  (ac-mode)
+  ;(ac-mode)
 )
 (defun m-js ()
   (interactive)
   (javascript-mode)
-  (ac-mode)
+  ;(ac-mode)
 )
 (defun m-html ()
   (interactive)
   (html-mode)
-  (ac-mode)
+  ;(ac-mode)
 )
 
 ;---------------------------------------------------
@@ -379,6 +382,9 @@
              (setq indent-tabs-mode nil)
              (php-enable-symfony2-coding-style)
              (subword-mode 1)
+             (require 'company-php)
+             (company-mode t)
+             (add-to-list 'company-backends 'company-ac-php-backend)
              )
           )
 
@@ -443,14 +449,22 @@
 ;---------------------------------------------------
 (require 'psvn)
 
+;;;; company
+(require 'company)
+(global-company-mode)
+(setq company-idle-delay 0)
+(setq company-minimum-prefix-length 2)
+(setq company-selection-wrap-around t)
+(define-key company-active-map (kbd "<tab>") 'company-complete-common-or-cycle)
+
 ;---------------------------------------------------
 ; ac-mode
 ;  http://komatsu.webmasters.gr.jp/elisp/ac-mode/
 ;---------------------------------------------------
-(load "ac-mode")
-(setq ac-mode-exception '(dired-mode hex-mode))
-(add-hook 'find-file-hooks 'ac-mode-without-exception)
-(setq ac-mode-goto-end-of-word t)
+;(load "ac-mode")
+;(setq ac-mode-exception '(dired-mode hex-mode))
+;(add-hook 'find-file-hooks 'ac-mode-without-exception)
+;(setq ac-mode-goto-end-of-word t)
 
 ;---------------------------------------------------
 ; kill-summary
