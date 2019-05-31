@@ -450,12 +450,12 @@
 (require 'psvn)
 
 ;;;; company
-(require 'company)
-(global-company-mode)
-(setq company-idle-delay 0)
-(setq company-minimum-prefix-length 2)
-(setq company-selection-wrap-around t)
-(define-key company-active-map (kbd "<tab>") 'company-complete-common-or-cycle)
+;; (require 'company)
+;; (global-company-mode)
+;; (setq company-idle-delay 0)
+;; (setq company-minimum-prefix-length 2)
+;; (setq company-selection-wrap-around t)
+;; (define-key company-active-map (kbd "<tab>") 'company-complete-common-or-cycle)
 
 ;---------------------------------------------------
 ; ac-mode
