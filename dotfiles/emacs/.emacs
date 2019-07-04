@@ -24,7 +24,7 @@
 ; See: http://emacs-jp.github.io/packages/package-management/package-el.html
 ;---------------------------------------------------
 (require 'package)
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(add-to-list 'package-archives '("melpa" . "https://melpa.milkbox.net/packages/"))
 (add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
@@ -93,6 +93,7 @@
 (add-to-list 'auto-mode-alist '("\\.twig$" .   web-mode))
 (add-to-list 'auto-mode-alist '("\\.jsx\\'" . jsx-mode))
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . typescript-mode))
+(add-to-list 'auto-mode-alist '("\\.dig\\'" . digdag-mode))
 (add-to-list 'auto-mode-alist '("\\.mustache\\'" . mustache-mode))
 (add-to-list 'auto-mode-alist '("\\.env\\..*\\'" . dotenv-mode))
 (add-to-list 'auto-mode-alist '("nginx\\(.*\\).conf[^/]*$" . nginx-mode))
@@ -433,6 +434,11 @@
   (setq twittering-timer-interval 300)
   (setq twittering-use-master-password t)
 )
+
+;---------------------------------------------------
+; digdag-mode
+;---------------------------------------------------
+(load "digdag-mode")
 
 ;---------------------------------------------------
 ; 行番号表示 wb-line-number
