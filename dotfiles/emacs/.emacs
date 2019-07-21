@@ -64,6 +64,8 @@
       docker-compose-mode
       dotenv-mode
       nginx-mode
+      tidal
+      haskell-mode
       ;company-php
       ))
 
@@ -404,6 +406,14 @@
 ; markdown-mode
 ;---------------------------------------------------
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
+
+;---------------------------------------------------
+; tidal
+;---------------------------------------------------
+(require 'tidal)
+(setq tidal-interpreter "stack")
+(setq tidal-interpreter-arguments (list "exec" "ghci"))
+(setq tidal-boot-script-path (shell-command-to-string "find $(stack path --snapshot-install-root) -name BootTidal.hs"))
 
 ;---------------------------------------------------
 ; coffee-mode
