@@ -90,6 +90,10 @@ fi
 export GOPATH=$HOME/.go
 PATH=$GOPATH/bin:$PATH
 
+if [ -d /usr/local/go/bin ]; then
+    export PATH=/usr/local/go/bin:$PATH
+fi
+
 #--------------------------------------------------------------------
 # tmuxinator
 #--------------------------------------------------------------------
