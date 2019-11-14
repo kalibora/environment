@@ -33,7 +33,7 @@ brew 'libmcrypt'
 brew 'libjpeg'
 brew 'libpng'
 brew 'libxml2'
-brew 'openssl
+brew 'openssl'
 brew 'autoconf'
 brew 'automake'
 
