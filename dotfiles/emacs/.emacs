@@ -47,7 +47,7 @@
       markdown-mode
       yaml-mode
       scss-mode
-      jsx-mode
+      rjsx-mode
       coffee-mode
       editorconfig
       swift-mode

@@ -6,6 +6,10 @@ dotfiles: ## Install dotfiles
 plist: ## Sync plist
 	cd ./plist/ && ./symlink.sh -fv
 
+.PHONY: bin
+bin: ## Sync bin
+	cd ./bin/ && ./symlink.sh -fv
+
 .PHONY: brew-init
 brew-init: ## Initialize homebrew
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"

@@ -33,13 +33,6 @@ fi
 eval "$(direnv hook zsh)"
 
 #--------------------------------------------------------------------
-# php-build
-#--------------------------------------------------------------------
-export PHP_BUILD_EXTRA_MAKE_ARGUMENTS=-j4
-export PHP_BUILD_CONFIGURE_OPTS="--with-gmp --enable-opcache"
-export PHP_BUILD_INSTALL_EXTENSION="apcu=@"
-
-#--------------------------------------------------------------------
 # phpenv
 #--------------------------------------------------------------------
 # export PHPENV_ROOT="$HOME/.phpenv"
