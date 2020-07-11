@@ -1,8 +1,21 @@
 #!/bin/bash
 
+#
+# 先に下記のコマンドで php-build をインストールしておいてください
+#
+# ```
+# ghq get git://github.com/php-build/php-build.git
+# ln -s ~/ghq/github.com/php-build/php-build/bin/php-build ~/bin/php-build
+# ```
+#
+
 if [ $# -ne 1 ]; then
     echo $0 "<php version>"
     exit 1
+fi
+
+if [ ! -d "$HOME/.php" ]; then
+    mkdir $HOME/.php
 fi
 
 YACC="$(brew --prefix bison)/bin/bison"
