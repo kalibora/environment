@@ -68,4 +68,15 @@ else
     "
 fi
 
+if [ "$(printf '%s\n' "7.4" "$1" | sort -V | head -n1)" = "7.4" ]; then
+    # Version 7.4 or higher
+    pkgs=("krb5" "openssl" "icu4c" "oniguruma")
+    paths=()
+    for pkg in ${pkgs[@]}; do
+        paths+=("$(brew --prefix $pkg)/lib/pkgconfig")
+    done
+
+    export PKG_CONFIG_PATH="$(IFS=:; echo "${paths[*]}"):${PKG_CONFIG_PATH}"
+fi
+
 php-build -i development {,~/.php/}$1
