@@ -8,7 +8,7 @@ plist: ## Sync plist
 
 .PHONY: brew-init
 brew-init: ## Initialize homebrew
-	/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 	brew tap Homebrew/bundle
 
 .PHONY: brew-bundle

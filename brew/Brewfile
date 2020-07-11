@@ -1,29 +1,40 @@
 # brew tap Homebrew/bundle
 
+##########
 # tap
-tap 'caskroom/cask'
-tap 'homebrew/php'
+##########
+# tap 'caskroom/cask'
+# tap 'homebrew/php'
 
+##########
 # CLI
+##########
 brew 'emacs'
-#brew 'gdbm'
 brew 'git'
 brew 'go'
-#brew 'pcre'
 brew 'the_silver_searcher'
-#brew 'xz'
 brew 'zsh'
-#brew 'composer'
 brew 'jq'
 brew 'peco'
 brew 'tree'
 brew 'source-highlight'
+brew 'direnv'
+brew 'wget'
+brew 'gawk'
+brew 'nkf'
+brew 'tmux'
 brew 'ansible'
 brew 'nvm'
-brew 'tmux'
-brew 'wget'
 brew 'ghq'
 brew 'hub'
+
+# sound
+brew 'ffmpeg'
+brew 'flac'
+brew 'vorbis-tools'
+brew 'opus'
+brew 'opus-tools'
+brew 'sox'
 
 # For build php
 brew 're2c'
@@ -37,9 +48,10 @@ brew 'openssl'
 brew 'autoconf'
 brew 'automake'
 
-# GUI
+##########
+# Cask
+##########
 # brew 'brew-cask'
-
 # cask 'appcleaner'
 # cask 'dropbox'
 # cask 'firefox'
