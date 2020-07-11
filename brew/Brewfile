@@ -28,6 +28,7 @@ brew 'nvm'
 brew 'ghq'
 brew 'hub'
 brew 'mysql@5.7'
+brew 'mysql-client@5.7'
 
 # sound
 brew 'ffmpeg'
