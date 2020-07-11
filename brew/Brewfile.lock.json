@@ -906,7 +906,8 @@
             }
           }
         }
-      }
+      },
+      "fstab/oniguruma/oniguruma-5.9.6": null
     }
   },
   "system": {
@@ -914,7 +915,7 @@
       "catalina": {
         "HOMEBREW_VERSION": "2.4.5",
         "HOMEBREW_PREFIX": "/usr/local",
-        "Homebrew/homebrew-core": "a30675c381baba1de959785a71f2f071214c57ff",
+        "Homebrew/homebrew-core": "6ba01beffb34f77bbbaee108f2e5200318f3b41c",
         "CLT": "11.5.0.0.1.1588476445",
         "Xcode": "11.5",
         "macOS": "10.15.5"
