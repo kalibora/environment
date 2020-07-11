@@ -27,6 +27,7 @@ brew 'ansible'
 brew 'nvm'
 brew 'ghq'
 brew 'hub'
+brew 'mysql@5.7'
 
 # sound
 brew 'ffmpeg'
