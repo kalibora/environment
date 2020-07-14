@@ -30,6 +30,7 @@ brew 'hub'
 brew 'mysql@5.7'
 brew 'mysql-client@5.7'
 brew 'reattach-to-user-namespace'
+brew 'python'
 
 # sound
 brew 'ffmpeg'
