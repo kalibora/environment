@@ -17,6 +17,10 @@
 # share/php-build/extension/definition に定義されているものだけです
 #
 
+if [ ! -d "$HOME/.php" ]; then
+    mkdir $HOME/.php
+fi
+
 if [ $# -ne 1 ]; then
     echo "# Usage"
     echo $0 "<php version>"
@@ -32,40 +36,37 @@ if [ $# -ne 1 ]; then
     exit 1
 fi
 
-if [ ! -d "$HOME/.php" ]; then
-    mkdir $HOME/.php
-fi
-
-YACC="$(brew --prefix bison)/bin/bison"
-PHP_BUILD_EXTRA_MAKE_ARGUMENTS="-j4"
-
 if [ "$(printf '%s\n' "7" "$1" | sort -V | head -n1)" = "7" ]; then
     # Version 7 or higher
-    PHP_BUILD_INSTALL_EXTENSION="apcu=@"
+    install_extensions=(
+        "apcu=5.1.18"
+    )
 
-    PHP_BUILD_CONFIGURE_OPTS="
-    --with-gmp
-    --with-zlib=$(brew --prefix zlib)
-    --with-bz2=$(brew --prefix bzip2)
-    --with-curl=$(brew --prefix curl)
-    --with-iconv=$(brew --prefix libiconv)
-    --with-libedit=$(brew --prefix libedit)
-    --with-tidy=$(brew --prefix tidy-html5)
-    "
+    configure_opts=(
+        "--with-gmp"
+        "--with-zlib=$(brew --prefix zlib)"
+        "--with-bz2=$(brew --prefix bzip2)"
+        "--with-curl=$(brew --prefix curl)"
+        "--with-iconv=$(brew --prefix libiconv)"
+        "--with-libedit=$(brew --prefix libedit)"
+        "--with-tidy=$(brew --prefix tidy-html5)"
+    )
 else
     # Version 5.6 or under
-    PHP_BUILD_INSTALL_EXTENSION="apcu=4.0.11"
+    install_extensions=(
+        "apcu=4.0.11"
+    )
 
-    PHP_BUILD_CONFIGURE_OPTS="
-    --with-gmp
-    --with-zlib=$(brew --prefix zlib)
-    --with-bz2=$(brew --prefix bzip2)
-    --with-curl=$(brew --prefix curl)
-    --with-iconv=$(brew --prefix libiconv)
-    --with-libedit=$(brew --prefix libedit)
-    --with-onig=$(brew --prefix oniguruma-5.9.6)
-    --without-tidy
-    "
+    configure_opts=(
+        "--with-gmp"
+        "--with-zlib=$(brew --prefix zlib)"
+        "--with-bz2=$(brew --prefix bzip2)"
+        "--with-curl=$(brew --prefix curl)"
+        "--with-iconv=$(brew --prefix libiconv)"
+        "--with-libedit=$(brew --prefix libedit)"
+        "--with-onig=$(brew --prefix oniguruma-5.9.6)"
+        "--without-tidy"
+    )
 fi
 
 if [ "$(printf '%s\n' "7.4" "$1" | sort -V | head -n1)" = "7.4" ]; then
@@ -78,5 +79,10 @@ if [ "$(printf '%s\n' "7.4" "$1" | sort -V | head -n1)" = "7.4" ]; then
 
     export PKG_CONFIG_PATH="$(IFS=:; echo "${paths[*]}"):${PKG_CONFIG_PATH}"
 fi
+
+export YACC="$(brew --prefix bison)/bin/bison"
+export PHP_BUILD_EXTRA_MAKE_ARGUMENTS="-j4"
+export PHP_BUILD_INSTALL_EXTENSION="$(IFS=' '; echo "${install_extensions[*]}")"
+export PHP_BUILD_CONFIGURE_OPTS="$(IFS=' '; echo "${configure_opts[*]}")"
 
 php-build -i development {,~/.php/}$1
