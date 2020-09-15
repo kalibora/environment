@@ -32,6 +32,7 @@ brew 'mysql-client@5.7'
 brew 'reattach-to-user-namespace'
 brew 'python'
 brew 'watch'
+brew 'gnupg'
 
 # sound
 brew 'ffmpeg'
