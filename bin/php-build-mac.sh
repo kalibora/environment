@@ -46,7 +46,7 @@ if [ "$(printf '%s\n' "7" "$1" | sort -V | head -n1)" = "7" ]; then
         "--with-gmp"
         "--with-zlib=$(brew --prefix zlib)"
         "--with-bz2=$(brew --prefix bzip2)"
-        "--with-curl=$(brew --prefix curl)"
+        "--with-curl=$(brew --prefix curl-openssl)"
         "--with-iconv=$(brew --prefix libiconv)"
         "--with-libedit=$(brew --prefix libedit)"
         "--with-tidy=$(brew --prefix tidy-html5)"
@@ -61,7 +61,7 @@ else
         "--with-gmp"
         "--with-zlib=$(brew --prefix zlib)"
         "--with-bz2=$(brew --prefix bzip2)"
-        "--with-curl=$(brew --prefix curl)"
+        "--with-curl=$(brew --prefix curl-openssl)"
         "--with-iconv=$(brew --prefix libiconv)"
         "--with-libedit=$(brew --prefix libedit)"
         "--with-onig=$(brew --prefix oniguruma-5.9.6)"
@@ -78,6 +78,13 @@ if [ "$(printf '%s\n' "7.4" "$1" | sort -V | head -n1)" = "7.4" ]; then
     done
 
     export PKG_CONFIG_PATH="$(IFS=:; echo "${paths[*]}"):${PKG_CONFIG_PATH}"
+fi
+
+# See: https://bugs.php.net/bug.php?id=80171
+if [ "$(printf '%s\n' "7.2" "$1" | sort -V | head -n1)" = "7.2" ]; then
+    if [ "$(printf '%s\n' "7.3" "$1" | sort -V | tail -n1)" = "7.3" ]; then
+        export CFLAGS="-Wno-error=implicit-function-declaration"
+    fi
 fi
 
 export YACC="$(brew --prefix bison)/bin/bison"
