@@ -32,7 +32,7 @@ if [ $# -ne 1 ]; then
     echo "cd $(ghq root)/github.com/php-build/php-build && git fetch && git pull --rebase origin master"
     echo ""
     echo "# List of installed versions"
-    ls -1 $HOME/.php
+    ls -1 $HOME/.php | sort -V
     exit 1
 fi
 
