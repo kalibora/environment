@@ -80,16 +80,12 @@ if [ "$(printf '%s\n' "7.4" "$1" | sort -V | head -n1)" = "7.4" ]; then
     export PKG_CONFIG_PATH="$(IFS=:; echo "${paths[*]}"):${PKG_CONFIG_PATH}"
 fi
 
-# See: https://bugs.php.net/bug.php?id=80171
-if [ "$(printf '%s\n' "7.2" "$1" | sort -V | head -n1)" = "7.2" ]; then
-    if [ "$(printf '%s\n' "7.3" "$1" | sort -V | tail -n1)" = "7.3" ]; then
-        export CFLAGS="-Wno-error=implicit-function-declaration"
-    fi
-fi
-
 export YACC="$(brew --prefix bison)/bin/bison"
 export PHP_BUILD_EXTRA_MAKE_ARGUMENTS="-j4"
 export PHP_BUILD_INSTALL_EXTENSION="$(IFS=' '; echo "${install_extensions[*]}")"
 export PHP_BUILD_CONFIGURE_OPTS="$(IFS=' '; echo "${configure_opts[*]}")"
+
+# See: https://bugs.php.net/bug.php?id=80171
+export CFLAGS="-Wno-error=implicit-function-declaration"
 
 php-build -i development {,~/.php/}$1
