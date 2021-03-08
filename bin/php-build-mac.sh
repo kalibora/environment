@@ -43,6 +43,7 @@ if [ "$(printf '%s\n' "7" "$1" | sort -V | head -n1)" = "7" ]; then
     )
 
     configure_opts=(
+        "--with-pear"
         "--with-gmp"
         "--with-zlib=$(brew --prefix zlib)"
         "--with-bz2=$(brew --prefix bzip2)"
