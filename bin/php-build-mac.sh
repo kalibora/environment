@@ -87,6 +87,8 @@ export PHP_BUILD_INSTALL_EXTENSION="$(IFS=' '; echo "${install_extensions[*]}")"
 export PHP_BUILD_CONFIGURE_OPTS="$(IFS=' '; echo "${configure_opts[*]}")"
 
 # See: https://bugs.php.net/bug.php?id=80171
-export CFLAGS="-Wno-error=implicit-function-declaration"
+export CFLAGS="-Wno-error=implicit-function-declaration -DU_DEFINE_FALSE_AND_TRUE=1"
+# See: https://qiita.com/kaihei777/items/0b68217f121686064e56
+export CPPFLAGS="-DU_DEFINE_FALSE_AND_TRUE=1"
 
 php-build -i development {,~/.php/}$1
